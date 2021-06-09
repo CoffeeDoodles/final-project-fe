@@ -1,10 +1,13 @@
 // import React, { useState, useEffect } from 'react'
 import React from 'react'
 
+import { PetCard } from '../lib/PetCard'
+
 // import { PETS_URL } from '../reusable/PET_API'
 
 
 export const RecentFoundPets = () => {
+
   // const [ petList, setPetList ] = useState([])
   // const [ error, setError ] = useState('')
   //   const fetchPetList = () => {
@@ -24,7 +27,7 @@ export const RecentFoundPets = () => {
     <div> 
       <a href="see-more-link">See more</a>
       <h1>Recently Found</h1>
-      {/* petcards */}
+      <PetCard />
     </div>
 
     // <div className="found- pet-list-container">    
