@@ -8,13 +8,13 @@ const Container = styled.div`
   border-radius: 0 10px 10px 10px;
   background-color: #fff;
 `
-const SubContainer = styled.div`
-  padding: 10px
-  border-radius: 0 10px 10px 10px;
-  border: 2px solid #black;
-  background-color: #50B9CD;
+// const SubContainer = styled.div`
+//   padding: 10px
+//   border-radius: 0 10px 10px 10px;
+//   border: 2px solid #black;
+//   background-color: #50B9CD;
 
-`
+// `
 
 const Title = styled.h1`
   margin: 0;
@@ -27,9 +27,9 @@ const Title = styled.h1`
 
 export const PetCard = ({ status, name, breed, species, location }) => (
   <Container>
-    <SubContainer>
+    {/* <SubContainer> */}
     <Title>PET STUFF</Title>
-    </SubContainer>
+    {/* </SubContainer> */}
   </Container>
 )
 
