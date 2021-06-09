@@ -1,11 +1,11 @@
 import React from 'react';
 
-import HomeWrapper from './components/HomeWrapper'
+import Home from './components/Home'
 
 const App = () => {
   return (
     <div>
-      <HomeWrapper/>
+      <Home />
     </div>
   );
 }

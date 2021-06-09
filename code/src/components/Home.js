@@ -1,36 +1,23 @@
-// import React, { useState, useEffect } from 'react'
+import React from 'react'
 
-// import { PETS_URL } from '../reusable/PET_API'
+import Header from './Header'
+import Footer from './Footer'
+import HeroSection from './HeroSection'
+import ArticleSection from './ArticleSection'
+import RecentLostPets from './RecentLostPets'
+import RecentFoundPets from './RecentFoundPets'
 
+const Home = () => {
+  return(
+    <div>
+      <Header />
+      <HeroSection />
+      <ArticleSection />
+      <RecentLostPets />
+      <RecentFoundPets />
+      <Footer />
+    </div>
+  )
+}
 
-// export const Home = () => {
-//     const [ petList, setPetList ] = useState([])
-//     const [ error, setError ] = useState('')
-    
-//       const fetchPetList = () => {
-//         fetch(PETS_URL)
-//             .then(res => res.json())
-//             .then(json => setPetList(json.results))
-//             .catch(err => {
-//                 setError(err)
-//             })
-//         }
-
-//     useEffect(() => {
-//       fetchPetList()
-//     }, [])
-
-//     return (
-//       <div className="pet-list-container">    
-//           {petList.map(pet => {  
-//               // return (
-//               //     <pets {...pet} /> 
-//               // )
-//           })}
-//           { error && <p>Something went not so great. Details {error}</p> }
-//       </div>
-//     )
-
-// }
-
-// export default Home
+export default Home

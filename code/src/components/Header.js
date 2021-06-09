@@ -7,7 +7,7 @@ import logo from '../assets/logo.png'
 
 const Header = () => {
     return(
-      <div>
+      <div className="header">
         <div className="hamburger-menu">Hamburger</div>
         <a href="#">
           <img src={logo} altText="logo for Petspotter" className="petspotter-logo"/>
