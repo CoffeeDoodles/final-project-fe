@@ -20,13 +20,13 @@ const Register = () => {
 
   useEffect(() => {
     if (accessToken){
-      history.push('/login')
+      history.push('/welcome-user')
     }
   },[accessToken, history])
 
   const onFormSubmit = (e) => {
     e.preventDefault()
-
+    
     const options = {
       method: 'POST',
       headers: {
