@@ -27,7 +27,9 @@ export const RecentFoundPets = () => {
     <div> 
       <a href="see-more-link">See more</a>
       <h1>Recently Found</h1>
-      <PetCard status="PET STUFF"/>
+      <PetCard 
+        // thumbnailUrl="https://unsplash.com/photos/brFsZ7qszSY"
+        status="PET STUFF"/>
     </div>
 
     // <div className="found- pet-list-container">    
