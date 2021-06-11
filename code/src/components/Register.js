@@ -5,7 +5,7 @@ import { useHistory, Link } from 'react-router-dom'
 import user from '../reducers/user'
 
 import { PETS_URL } from '../reuseables/urls'
-import { MainContainer, Header, Form, Label, InputField, Text, SecondaryButtonContainer, PrimaryButton, SecondaryButton, ErrorMessage, InputWrapper } from './styled-components/form-style'
+import { MainContainer, Header, Form, Label, InputField, Text, SecondaryButtonContainer, PrimaryButton, SecondaryButton, ErrorMessage, InputWrapper } from './styled-components/Form'
 
 const Register = () => {
   const [username, setUsername] = useState('')

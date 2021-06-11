@@ -4,7 +4,7 @@ import { useHistory, Link } from 'react-router-dom'
 
 import user from '../reducers/user'
 import { PETS_URL } from '../reuseables/urls'
-import { InputField, Label, Form, MainContainer, Header, InputWrapper, PrimaryButton, SecondaryButtonContainer, SecondaryButton, Text, ErrorMessage } from '../components/styled-components/Form'
+import { InputField, Label, Form, MainContainer, Header, InputWrapper, PrimaryButton, SecondaryButtonContainer, SecondaryButton, Text, ErrorMessage } from './styled-components/Form'
 
 const Login = () => {                     
   const [username, setUsername] = useState('')
@@ -80,7 +80,7 @@ const Login = () => {
         </PrimaryButton>
         <SecondaryButtonContainer>
           <Text>
-            Register as a VIP? 
+            Register as a PetSpotter? 
           </Text>
           <Link to="/register">
             <SecondaryButton>

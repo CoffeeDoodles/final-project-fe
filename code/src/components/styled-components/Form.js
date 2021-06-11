@@ -1,5 +1,20 @@
 import styled from 'styled-components'
 
+export const MainContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+`
+
+export const Header = styled.h1`
+  font-weight: 300;
+  font-size: 35px;
+  margin-top: 15px;
+  @media (min-width: 768px) {
+    font-size: 40px;
+  }
+`
+
 export const InputField = styled.input`
   border-radius: 10px;
   width: 100%;
@@ -8,6 +23,7 @@ export const InputField = styled.input`
   border: 1px solid lightgrey;
   background-color: whitesmoke;
   padding: 15px;
+  `
 
   export const Form = styled.form`
   width: 80%;
@@ -35,16 +51,6 @@ export const Label = styled.label`
   margin-bottom: 10px;
 `
 
-export const InputField = styled.input`
-  border-radius: 10px;
-  width: 100%;
-  margin: 15px 0;
-  box-sizing:border-box;
-  border: 1px solid lightgrey;
-  background-color: whitesmoke;
-  padding: 15px;
-`
-
 export const SecondaryButtonContainer = styled.div`
   border-top: 1px solid lightgrey;
   width: 90%;
@@ -55,6 +61,12 @@ export const SecondaryButtonContainer = styled.div`
 export const Text = styled.p`
   font-weight: 300;
   margin-top: 15px;
+`
+
+export const ButtonContainer = styled.div`
+  width: 90%;
+  margin-bottom: 40px;
+  text-align: center;
 `
 
 export const PrimaryButton = styled.button`
