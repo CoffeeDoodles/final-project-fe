@@ -3,7 +3,7 @@ import { useSelector, useDispatch, batch} from 'react-redux'
 import { useHistory, Link } from 'react-router-dom'
 
 import user from '../reducers/user'
-import { PETS_URL } from '../reuseables/urls'
+import { PETS_API_URL } from '../reuseables/urls'
 import { InputField, Label, Form, MainContainer, Header, InputWrapper, PrimaryButton, SecondaryButtonContainer, SecondaryButton, Text, ErrorMessage } from './styled-components/Form'
 
 const Login = () => {                     
@@ -19,7 +19,7 @@ const Login = () => {
 
   useEffect(() => {
     if (accessToken){
-      history.push('/home')
+      history.push('/welcome-user')
     }
   },[accessToken, history])
 
@@ -33,7 +33,7 @@ const Login = () => {
       },
       body: JSON.stringify({ username, password })
     }
-    fetch (PETS_URL(mode), options)
+    fetch (PETS_API_URL(mode), options)
       .then(res => res.json())
       .then(data => {
         if (data.success) {
@@ -41,6 +41,11 @@ const Login = () => {
             dispatch(user.actions.setUsername(data.username))
             dispatch(user.actions.setAccessToken(data.accessToken))
             dispatch(user.actions.setErrors(null))
+
+            localStorage.setItem('user', JSON.stringify({
+              username: data.username,
+              accessToken: data.accessToken
+            }))
           })
         } else {
           dispatch(user.actions.setErrors(data))

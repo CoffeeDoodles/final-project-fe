@@ -1,13 +1,23 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const user = createSlice ({
-    name: 'user', 
-    initialState: {
-        username: null,
-        accessToken: null,
+// add user to localStorage 
+const initialState = localStorage.getItem('user')
+    ? {
+        username: JSON.parse(localStorage.getItem('user')).username,
+        accessToken: JSON.parse(localStorage.getItem('user')).accessToken, 
         errors: null,
-        homePage: null
-    },
+        secretMessage: null
+    }
+    : {
+        username: null,
+        accessToken: null, 
+        errors: null,
+        secretMessage: null
+    }
+
+const user = createSlice({
+    name: 'user',
+    initialState,
     reducers: {
         setUsername: (store, action) => {
             store.username = action.payload
@@ -18,11 +28,10 @@ const user = createSlice ({
         setErrors: (store, action) => {
             store.errors = action.payload
         },
-        setHomePage: (store, action) => {
-            store.homePage = action.payload
-        }
+        setSecretMessage: (store, action) => {
+          store.secretMessage = action.payload
+      }
     }
 })
 
 export default user
-

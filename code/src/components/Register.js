@@ -4,7 +4,7 @@ import { useHistory, Link } from 'react-router-dom'
 
 import user from '../reducers/user'
 
-import { PETS_URL } from '../reuseables/urls'
+import { PETS_API_URL } from '../reuseables/urls'
 import { MainContainer, Header, Form, Label, InputField, Text, SecondaryButtonContainer, PrimaryButton, SecondaryButton, ErrorMessage, InputWrapper } from './styled-components/Form'
 
 const Register = () => {
@@ -34,7 +34,7 @@ const Register = () => {
       },
       body: JSON.stringify({ username, password }) 
     }
-    fetch (PETS_URL(mode), options)
+    fetch (PETS_API_URL(mode), options)
       .then(res => res.json())
       .then(data => {
         if (data.success) {
@@ -42,6 +42,11 @@ const Register = () => {
             dispatch(user.actions.setUsername(data.username))
             dispatch(user.actions.setAccessToken(data.accessToken))
             dispatch(user.actions.setErrors(null))
+
+            localStorage.setItem('user', JSON.stringify({
+              username: data.username,
+              accessToken: data.accessToken
+            }))
           })
         } else {
           dispatch(user.actions.setErrors(data))
