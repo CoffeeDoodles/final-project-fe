@@ -1,12 +1,24 @@
 import React from 'react'
+import styled from 'styled-components'
+
+import heroImg from '../assets/hero.jpg'
+
+const HeroContent = styled.div`
+    background-image: url(${heroImg});
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+`
+
 
 const HeroSection = () => {
     return(
-        <div className="hero-section">
-          {/* <img className="" src="" alt="" /> */}
-          <h1>Hero text</h1>
-        </div>
+      <div>
+        <HeroContent />
+      </div>
     )
 }
 
 export default HeroSection
+

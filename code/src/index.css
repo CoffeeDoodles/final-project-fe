@@ -3,8 +3,8 @@ body {
   font-family: 'Niramit', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(190, 101, 101);
-  padding: 50px;
+  background-color: #F9FBFB;
+  padding: 0;
 }
 
 code {
@@ -12,12 +12,13 @@ code {
     monospace;
 }
 
-.header {
+/* .header {
   background-color:teal;
   display: flex;
   flex-direction: row;
   margin-bottom: 5px;
-}
+} */
+
 
 .footer {
   background-color:teal;
