@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import user from '../reducers/user'
 import { Nav, NavLink, Bars, NavMenu } from './styled-components/NavbarElements';
 import { ButtonContainer, PrimaryButton } from './styled-components/Form'
+import CreatePostButton from './CreatePostButton';
 
 
 
@@ -39,7 +40,10 @@ const Navbar = () => {
         <NavLink to='/contact' activeStyle>
           Contact
         </NavLink>
-        </NavMenu>    
+        </NavMenu>
+        <ButtonContainer>
+          <CreatePostButton />
+        </ButtonContainer>
       <ButtonContainer>
       <PrimaryButton onClick={onButtonClick} > Logout </PrimaryButton>
       </ButtonContainer>
