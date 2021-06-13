@@ -4,6 +4,8 @@ import { useSelector, useDispatch, batch} from 'react-redux'
 
 import { MainContainer, Header, InputWrapper, ErrorMessage, Form, Label, InputField, PrimaryButton, SecondaryButtonContainer, SecondaryButton, Text } from '../components/styled-components/Form'
 
+import { ImageUpload } from './ImageUpload'
+
 const CreatePost = () => {
   const [petName, setPetName] = useState('')
   const [breed, setBreed] = useState('')
@@ -29,12 +31,8 @@ return (
             id='status'
             type='text' 
           />
-        <Label htmlFor="photo">Upload image:</Label> 
-          <InputField
-            id='photo'
-            type='file'
-            accept='image/*'
-          />
+        {/* <Label htmlFor="photo">Upload image:</Label>  */}
+          <ImageUpload />
         <Label htmlFor="pet-name">Pet Name (optional):</Label> 
         <InputField
           id='petname'
