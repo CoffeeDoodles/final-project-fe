@@ -1,6 +1,6 @@
 import React from 'react'
 
-import CreatePost from '../Form'
+import CreatePost from '../PetPostForm'
 
 const PetPostPage = () => {
 

@@ -1,17 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-import { PrimaryButton } from '../components/styled-components/Form'
+import { PrimaryButton } from './styled-components/Form'
 
 const CreatePostButton = () => {
- 
-  return(
-    <PrimaryButton
-      type='submit'
-      // onClick={() => setMode('new-post')}
-    >
-      Create New Post
-    </PrimaryButton>
-  )
-}
+  return (
+    <Link to="/create-post">
+      <PrimaryButton className="create-button" type="submit">
+        Create New Post   
+      </PrimaryButton>
+    </Link>
+  );
+};
 
 export default CreatePostButton
+

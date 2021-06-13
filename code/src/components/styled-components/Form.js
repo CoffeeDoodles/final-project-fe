@@ -20,8 +20,8 @@ export const InputField = styled.input`
   width: 100%;
   margin: 15px 0;
   box-sizing:border-box;
-  border: 1px solid lightgrey;
-  background-color: whitesmoke;
+  border: 2px solid #50B9CD;
+  background-color: white;
   padding: 15px;
   `
 
@@ -30,12 +30,12 @@ export const InputField = styled.input`
   height: fit-content;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  border: 3px solid white;
   border-radius: 20px;
   align-items: center;
   margin: 60px auto;
   padding: 10px;
-  background-color: rgba(244,244,244,0.5); 
+  background-color: #54B0C1; 
   @media (min-width: 768px) {
     max-width: 650px;
     margin: 150px auto;
@@ -49,10 +49,11 @@ export const InputWrapper = styled.div`
 export const Label = styled.label`
   font-weight: 300;
   margin-bottom: 10px;
+  margin-right: 16px;
 `
 
 export const SecondaryButtonContainer = styled.div`
-  border-top: 1px solid lightgrey;
+  border-top: 1px solid white;
   width: 90%;
   margin-top: 15px;
   text-align: center;
@@ -73,13 +74,13 @@ export const PrimaryButton = styled.button`
   border-radius: 10px;
   font-size: 20px;
   font-weight: 200;
-  width: 50%;
+  width: 40%;
   margin: 10px 0 10px 0;
   padding: 10px 20px;
-  border: 1px solid lightgrey;
-  background-color: rgba(189,227,219,0.9);
+  border: 3px solid white;
+  background-color: #8FE0EF;
   &:hover {
-    background-color: rgb(189,227,219);
+    background-color: #D1F8FF;
   }
   cursor: pointer;
 `
@@ -91,10 +92,10 @@ export const SecondaryButton = styled.button`
   width: 50%;
   margin-bottom: 30px;
   padding: 10px 20px;
-  border: 1px solid lightgrey;
-  background-color: rgba(189,227,219,0.8);
+  border: 3px solid white;
+  background-color: #8FE0EF;
   &:hover {
-    background-color: rgb(189,227,219);
+    background-color: #D1F8FF;
   }
   cursor: pointer;
 `
@@ -107,4 +108,29 @@ export const ErrorMessage = styled.div`
   width: fit-content;
   padding: 10px;
   border: 2px solid rgb(123,104,238);
+`
+
+export const Wrapper = styled.div`
+  height: auto;
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+`
+
+export const RadioWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+
+`
+// styled radio? stretch goal?
+export const RadioButton = styled.input`
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
 `
