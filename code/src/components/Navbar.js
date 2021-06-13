@@ -6,6 +6,7 @@ import user from '../reducers/user'
 import { Nav, NavLink, Bars, NavMenu } from './styled-components/NavbarElements';
 import { ButtonContainer, PrimaryButton } from './styled-components/Form'
 import CreatePostButton from './CreatePostButton';
+import Logo from './Logo'
 
 
 
@@ -27,6 +28,7 @@ const Navbar = () => {
       <>
       <Nav>
         <Bars />
+        <Logo />
         <NavMenu>
         <NavLink to='/home' activeStyle>
           Home

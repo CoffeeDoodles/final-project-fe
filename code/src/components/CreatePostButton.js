@@ -7,7 +7,7 @@ const CreatePostButton = () => {
   return (
     <Link to="/create-post">
       <PrimaryButton className="create-button" type="submit">
-        Create New Post   
+        Create Post   
       </PrimaryButton>
     </Link>
   );

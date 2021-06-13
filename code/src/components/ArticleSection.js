@@ -12,9 +12,7 @@ const ArticleContainer = styled.div`
 
   img {
     width: 30%;
-    object-fit: contain;
-
-    
+    object-fit: contain;    
   }
 `
 
@@ -22,9 +20,6 @@ const Text = styled.p`
   color: #384E52;
   font-size: 20px;
 `
-
-
-
 
 const ArticleSection = () => {
     return(

@@ -1,16 +1,16 @@
 import React from 'react'
 
 import Navbar from './Navbar'
-// import logo from '../assets/logo.png'
+// import Logo from './Logo'
 
-// import userIcon from '../assets/usericon.jpeg'
 
 
 const Header = () => {
     return(
-      <div>
+      <>
+        {/* <Logo /> */}
         <Navbar />
-      </div>
+      </>
     )
 }
 

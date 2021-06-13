@@ -74,7 +74,7 @@ export const PrimaryButton = styled.button`
   border-radius: 10px;
   font-size: 20px;
   font-weight: 200;
-  width: 40%;
+  width: 50%;
   margin: 10px 0 10px 0;
   padding: 10px 20px;
   border: 3px solid white;
