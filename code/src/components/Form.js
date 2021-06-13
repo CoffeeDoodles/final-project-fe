@@ -4,7 +4,6 @@ import { useSelector, useDispatch, batch} from 'react-redux'
 
 import { MainContainer, Header, InputWrapper, ErrorMessage, Form, Label, InputField, PrimaryButton, SecondaryButtonContainer, SecondaryButton, Text } from '../components/styled-components/Form'
 
-
 const CreatePost = () => {
   const [petName, setPetName] = useState('')
   const [breed, setBreed] = useState('')
@@ -34,6 +33,7 @@ return (
           <InputField
             id='photo'
             type='file'
+            accept='image/*'
           />
         <Label htmlFor="pet-name">Pet Name (optional):</Label> 
         <InputField
