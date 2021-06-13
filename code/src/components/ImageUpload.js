@@ -1,16 +1,14 @@
-import React, { useState, useRef } from 'react'
+import React, { useRef } from 'react'
 
 const API_URL = 'http://localhost:8080/upload-images'
 
 export const ImageUpload = () => {
   const fileInput = useRef()
-  const [name, setName] = useState('')
 
   const handleFormSubmit = (e) => {
     e.preventDefault()
     const formData = new FormData()
     formData.append('image', fileInput.current.files[0])
-    formData.append('name', name)
 
     fetch(API_URL, { method: 'POST', body: formData })
       .then((res) => res.json())
@@ -25,14 +23,8 @@ export const ImageUpload = () => {
         Pet Image
         <input type="file" ref={fileInput} />
       </label>
-
-      <label>
-        Pet name
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-      </label>
-
       <button type="submit">
-        Submit
+        Upload Image
       </button>
     </form>
   )

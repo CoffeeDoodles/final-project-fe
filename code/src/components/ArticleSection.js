@@ -11,7 +11,7 @@ const ArticleContainer = styled.div`
   padding: 16px;
 
   img {
-    width: 100%;
+    width: 30%;
     object-fit: contain;
 
     

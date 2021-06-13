@@ -38,21 +38,49 @@ return (
           id='petname'
           type='text'
         />
-        <Label htmlFor="species">Species:</Label> 
-        <InputField
-          id='species'
-          type='text'
-        />
+        <InputWrapper>
+          <Label htmlFor="species">Species:</Label> 
+            <select id="species" onChange={(e) => {
+                                setSpecies(e.target.value);
+                            }}>
+                                <option disabled selected value>Select an Species (More coming soon!)</option>
+                                <option>Cat</option>
+                                <option>Dog</option>
+            </select>
+        </InputWrapper>
+
+                              
         <Label htmlFor="breed">Breed:</Label> 
         <InputField
           id='breed'
           type='text'
         />
-        <Label htmlFor="species">Sex:</Label> 
-        <InputField
-          id='sex'
-          type='radiobutton'
-        />
+        <InputWrapper>
+          <Label htmlFor="sex">Sex:</Label> 
+            <SecondaryButtonContainer>
+            <Label htmlFor="female">Female</Label>
+            <InputField
+              id='female'
+              type='radio'
+              name='sexRadio'
+              value='female'
+            />
+            <Label htmlFor="male">Male</Label>
+            <InputField
+              id='male'
+              type='radio'
+              name='sexRadio'
+              value='male'
+            />
+            <Label htmlFor="other">Other</Label>
+            <InputField
+              id='other'
+              type='radio'
+              name='sexRadio'
+              value='other'
+            />
+            </SecondaryButtonContainer>
+        </InputWrapper>
         <Label htmlFor="description">Description:</Label> 
         <InputField
           id='description'
