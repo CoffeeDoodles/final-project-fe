@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { PrimaryButton } from './styled-components/Form'
+import { PrimaryButton } from './styled-components/FormElements'
 
 const CreatePostButton = () => {
   return (

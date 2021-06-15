@@ -3,11 +3,9 @@ import { useDispatch, useSelector, batch} from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import user from '../reducers/user'
-import { Nav, NavLink, Bars, NavMenu } from './styled-components/NavbarElements';
-import { ButtonContainer, PrimaryButton } from './styled-components/Form'
+import { Nav, NavLink, Bars, NavMenu, ButtonWrapper } from './styled-components/NavbarElements';
+import { PrimaryButton } from './styled-components/FormElements'
 import CreatePostButton from './CreatePostButton';
-import Logo from './Logo'
-
 
 
 const Navbar = () => {
@@ -28,7 +26,6 @@ const Navbar = () => {
       <>
       <Nav>
         <Bars />
-        <Logo />
         <NavMenu>
         <NavLink to='/home' activeStyle>
           Home
@@ -43,12 +40,10 @@ const Navbar = () => {
           Contact
         </NavLink>
         </NavMenu>
-        <ButtonContainer>
+        <ButtonWrapper>
           <CreatePostButton />
-        </ButtonContainer>
-      <ButtonContainer>
-      <PrimaryButton onClick={onButtonClick} > Logout </PrimaryButton>
-      </ButtonContainer>
+          <PrimaryButton onClick={onButtonClick} > Logout </PrimaryButton>
+        </ButtonWrapper>
       </Nav>
       </>
     )
@@ -56,7 +51,7 @@ const Navbar = () => {
     return (  
 	<>
 	<Nav>
-		<Bars />
+		{/* <Bars /> */}
 		<NavMenu>
 		<NavLink to='/home' activeStyle>
 			Home
@@ -71,13 +66,13 @@ const Navbar = () => {
 			Contact
 		</NavLink>
 		</NavMenu>
-    <ButtonContainer>
+    <ButtonWrapper>
           <Link to="/login">
             <PrimaryButton>
               Login
             </PrimaryButton>
           </Link>
-    </ButtonContainer>     
+    </ButtonWrapper>     
 	</Nav>
 	</>
 )};

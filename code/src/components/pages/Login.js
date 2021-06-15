@@ -4,7 +4,17 @@ import { useHistory, Link } from 'react-router-dom'
 
 import user from '../../reducers/user'
 import { PETS_API_URL } from '../../reuseables/urls'
-import { InputField, Label, Form, MainContainer, Header, InputWrapper, PrimaryButton, SecondaryButtonContainer, SecondaryButton, Text, ErrorMessage } from '../styled-components/Form'
+import { InputField, 
+  Label, 
+  Form, 
+  MainContainer, 
+  Header, 
+  InputWrapper, 
+  PrimaryButton, 
+  SecondaryButtonContainer, 
+  SecondaryButton, 
+  Text, 
+  ErrorMessage } from '../styled-components/FormElements'
 
 const Login = () => {                     
   const [username, setUsername] = useState('')

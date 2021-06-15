@@ -7,8 +7,10 @@ import logoImg from '../assets/logo.png'
 //   width: 20%;
 // `
 const HeaderLogo = styled.img`
-  width: 100%;
-  margin: 0 0px 0 0;
+  height: 150px;
+  position: relative;
+  top: -25px;
+  left: 20px;
 `
 
 const Logo = () => {

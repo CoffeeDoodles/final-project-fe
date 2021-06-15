@@ -1,11 +1,11 @@
 import React from 'react'
 
-import CreatePost from '../PetPostForm'
+import CreatePost from '../PostForm'
 
 const PetPostPage = () => {
 
   return(
-    <CreatePost />
+    <div>Pet Posts Go here!</div>
   )
 }
  

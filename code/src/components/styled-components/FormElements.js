@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 export const MainContainer = styled.div`
   width: 100%;
@@ -13,6 +13,16 @@ export const Header = styled.h1`
   @media (min-width: 768px) {
     font-size: 40px;
   }
+`
+
+export const TextArea = styled.textarea`
+  border-radius: 10px;
+  border: 2px solid #50B9CD;
+  box-sizing: border-box;
+  background-color: white;
+  padding: 15px;  
+  width: 100%;
+  height: 200px;
 `
 
 export const InputField = styled.input`
