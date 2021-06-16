@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux'
 
 import { PETS_API_URL } from '../reuseables/urls';
 import PostForm from './PostForm';
 
+import form from '../reducers/form'
+
 const PostFormLogic = () => {
+  const details = useSelector((store) => store.form.details);
+  const dispatch = useDispatch();
+
   const [status, setStatus] = useState('')
   const [petname, setPetname] = useState('')
   const [species, setSpecies] = useState('')
@@ -68,19 +74,13 @@ const PostFormLogic = () => {
     
   fetch( PETS_API_URL, options)
     .then((res) => res.json())
-    .then(() => 
-    setStatus(''),
-    setPetname(''),
-    setSpecies(''),
-    setBreed(''),
-    setSex(''),
-    setDescription(''),
-    setLocation(''),
-    setEmail('')
-    )
+    .then((data) => {
+      dispatch(form.actions.setAddSinglePost(data))
+    })
+
+    //it clear
     e.target.reset()
   }
-  
   
   return (
     <div>
