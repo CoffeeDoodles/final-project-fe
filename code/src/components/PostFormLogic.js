@@ -78,6 +78,7 @@ const PostFormLogic = () => {
     setLocation(''),
     setEmail('')
     )
+    e.target.reset()
   }
   
   
@@ -91,7 +92,16 @@ const PostFormLogic = () => {
         onPetnameChange={handlePetnameChange}
         species={species}
         onSpeciesChange={handleSpeciesChange}
-
+        breed={breed}
+        onBreedChange={handleBreedChange}
+        sex={sex}
+        onSexChange={handleSexChange}
+        description={description}
+        onDescriptionChange={handleDescriptionChange}
+        location={location}
+        onLocationChange={handleLocationChange}
+        email={email}
+        onEmailChange={handleEmailChange}
       />
       petcard goes here!
     </div>
