@@ -4,6 +4,7 @@ export const MainContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 `
 
 export const Header = styled.h1`
@@ -17,7 +18,7 @@ export const Header = styled.h1`
 
 export const TextArea = styled.textarea`
   border-radius: 10px;
-  border: 2px solid #50B9CD;
+  border: 3px dotted #50B9CD;
   box-sizing: border-box;
   background-color: white;
   padding: 15px;  
@@ -63,7 +64,6 @@ export const Label = styled.label`
 `
 
 export const SecondaryButtonContainer = styled.div`
-  border-top: 1px solid white;
   width: 90%;
   margin-top: 15px;
   text-align: center;
