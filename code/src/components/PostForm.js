@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 
 const PostForm = () => {
   const [status, setStatus] = useState('')
@@ -33,23 +33,26 @@ const PostForm = () => {
           >
           <label htmlFor="status">Pet Status:</label>
           <input 
-            name="status"
+            id="status"
+            name="statusRadio"
             type="radio"
             required
             value={status}
             onChange={(e) => setStatus(e.target.value)}
           />
-          <label htmlFor="lost">Lost</label>
+          <label htmlFor="status">Lost</label>
           <input 
-            name="status"
+            id="status"
+            name="statusRadio"
             type="radio"
             required
             value={status}
             onChange={(e) => setStatus(e.target.value)}
           />
-          <label>Found</label>
+          <label htmlFor="status">Found</label>
           <input
-            name="status" 
+            id="status"
+            name="statusRadio" 
             type="radio"
             required
             value={status}
@@ -59,16 +62,18 @@ const PostForm = () => {
         </div>
         <label htmlFor="petName">Pet Name:</label>
         <input 
+          id="petName"
           type="text"
           value={petName}
           onChange={(e) => setPetName(e.target.value)}
         />
         <label htmlFor="species">Species:</label>
         <select 
+          id="species"
           value={species}
           onChange={(e) => setSpecies(e.target.value)}
         >
-          <option disabled selected value>
+          <option defaultValue>
             Select an Species (More coming soon!)
           </option>
           <option 
@@ -80,8 +85,9 @@ const PostForm = () => {
               Cat
           </option>
         </select>
-        <label>Breed:</label>
+        <label htmlFor="breed">Breed:</label>
         <input
+          id="breed"
           type="text"
           required
           value={breed}
@@ -89,23 +95,26 @@ const PostForm = () => {
         />
         <label htmlFor="sex">Sex:</label>
         <input 
-          name="gender"
+          id="sex"
+          name="sexRadio"
           type="radio"
           required
           value={sex}
           onChange={(e) => setSex(e.target.value)}
         />
-        <label htmlFor="female">Female</label>
+        <label htmlFor="sex">Female</label>
         <input
-          name="gender" 
+          id="sex"
+          name="sexRadio" 
           type="radio"
           required
           value={sex}
           onChange={(e) => setSex(e.target.value)}
         />
-        <label htmlFor="male">Male</label>
+        <label htmlFor="sex">Male</label>
         <input 
-          name="gender"
+          id="sex"
+          name="sexRadio"
           type="radio"
           required
           value={sex}
@@ -114,6 +123,7 @@ const PostForm = () => {
         <label htmlFor="other">Other</label>
         <label htmlFor="location">Location:</label>
         <input 
+          id="location"
           type="text"
           required
           value={location}
@@ -121,6 +131,7 @@ const PostForm = () => {
         />
         <label htmlFor="description">Description:</label>
         <textarea
+          id="description"
           placeholder="Please describe in as much detail as possible.
            Fur color/patterns, eye color, distinguishing marks etc."
           required
@@ -129,7 +140,8 @@ const PostForm = () => {
         >
         </textarea>
         <label htmlFor="email">Contact Email:</label>
-        <input 
+        <input
+          id="email"
           type="email"
           required
           value={email}
