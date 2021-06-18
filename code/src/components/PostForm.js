@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 // import { useHistory } from 'react-router-dom';
 
-import { accessToken } from '../reducers/user'
+import user from '../reducers/user'
 import { MainContainer, Form } from './styled-components/FormElements'
 
 const PostForm = () => {
@@ -17,10 +18,11 @@ const PostForm = () => {
   const handleOnSubmit = (e) => {
     e.preventDefault();
     const post = { status, petName, species, breed, sex, location, description, email };
+    // const accessToken = useSelector(store => store.user.accessToken)
 
     fetch ('http://localhost:8080/petposts', {
       method: 'POST',
-      headers: { "Content-Type": "application/json", Authorization:  },
+      headers: { "Content-Type": "application/json", Authorization: "" },
       body: JSON.stringify(post)
     })
     .then(() => {
@@ -35,29 +37,29 @@ const PostForm = () => {
         <div className="radio-wrapper">
           <label htmlFor="status">Pet Status:</label>
           <input 
-            id="status"
+            id="statusLost"
             name="statusRadio"
             type="radio"
             required
-            value={status}
+            value="lost"
             onChange={(e) => setStatus(e.target.value)}
           />
           <label htmlFor="status">Lost</label>
           <input 
-            id="status"
+            id="statusFound"
             name="statusRadio"
             type="radio"
             required
-            value={status}
+            value="found"
             onChange={(e) => setStatus(e.target.value)}
           />
           <label htmlFor="status">Found</label>
           <input
-            id="status"
+            id="statusReturned"
             name="statusRadio" 
             type="radio"
             required
-            value={status}
+            value="returned"
             onChange={(e) => setStatus(e.target.value)}
           />
           <label htmlFor="returned-home">Returned Home</label>
@@ -98,29 +100,29 @@ const PostForm = () => {
         <div className="radio-wrapper">
           <label htmlFor="sex">Sex:</label>
           <input 
-            id="sex"
+            id="sexFemale"
             name="sexRadio"
             type="radio"
             required
-            value={sex}
+            value="female"
             onChange={(e) => setSex(e.target.value)}
           />
           <label htmlFor="sex">Female</label>
           <input
-            id="sex"
+            id="sexMale"
             name="sexRadio" 
             type="radio"
             required
-            value={sex}
+            value="male"
             onChange={(e) => setSex(e.target.value)}
           />
           <label htmlFor="sex">Male</label>
           <input 
-            id="sex"
+            id="sexOther"
             name="sexRadio"
             type="radio"
             required
-            value={sex}
+            value="other"
             onChange={(e) => setSex(e.target.value)}
           />
           <label htmlFor="other">Other</label>
