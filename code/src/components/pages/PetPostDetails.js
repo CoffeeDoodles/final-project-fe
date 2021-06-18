@@ -1,19 +1,25 @@
-// import React from 'react'
-// import { useParams } from 'react-router-dom'
+import React, {useState, useEffect} from 'react'
+import { useParams } from 'react-router-dom';
 
-// import useFetch from '../useFetch';
+import useFetch from '../useFetch';
+
+import status from '../PostForm';
 
 
-// const PetProfile = () => {
-//   const { id } = useParams();
-//   const { data, error, isPending } = useFetch('http://localhost:8080/petposts/' + id )
+const PetProfile = () => {
+  const { id } = useParams();
+  const { data, error, isPending } = useFetch('http://localhost:8080/petposts/' + id )
 
-//   return (
-//     <div className="petpost-details">
-//       { isPending && <div>Loading...</div> }
-//       { error && <div>{ error }</div> }
-//     </div>
-//   )
-// }
+  return (
+    <div className="main-container">
+      <div className="petpost-details">
+        { isPending && <div>Loading...</div> }
+        { error && <div>{ error }</div> }
+      </div>
+      <label>Status: {status}</label>
 
-// export default PetProfile
+    </div>
+  )
+}
+
+export default PetProfile

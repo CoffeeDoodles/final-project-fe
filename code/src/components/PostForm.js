@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-// import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
-import user from '../reducers/user'
+// import user from '../reducers/user'
 import { MainContainer, Form } from './styled-components/FormElements'
 
 const PostForm = () => {
@@ -15,18 +15,21 @@ const PostForm = () => {
   const [description, setDescription] = useState('')
   const [email, setEmail] = useState('')
 
+  const accessToken = useSelector(store => store.user.accessToken)
+  const history = useHistory()
+
   const handleOnSubmit = (e) => {
     e.preventDefault();
     const post = { status, petName, species, breed, sex, location, description, email };
-    // const accessToken = useSelector(store => store.user.accessToken)
 
     fetch ('http://localhost:8080/petposts', {
       method: 'POST',
-      headers: { "Content-Type": "application/json", Authorization: "" },
+      headers: { "Content-Type": "application/json", Authorization: accessToken },
       body: JSON.stringify(post)
     })
     .then(() => {
       console.log('new post added')
+      history.push('/petposts')
     })    
   }
 
