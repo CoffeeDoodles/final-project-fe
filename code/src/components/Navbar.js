@@ -53,16 +53,16 @@ const Navbar = () => {
 	<Nav>
 		{/* <Bars /> */}
 		<NavMenu>
-		<NavLink to='/home' activeStyle>
+		<NavLink to='/' >
 			Home
 		</NavLink>
-		<NavLink to='/petposts' activeStyle>
+		<NavLink to='/petposts'>
 			Pet Posts
 		</NavLink>
-		<NavLink to='/about-us' activeStyle>
+		<NavLink to='/about-us'>
 			About Us
 		</NavLink>
-		<NavLink to='/contact' activeStyle>
+		<NavLink to='/contact'>
 			Contact
 		</NavLink>
 		</NavMenu>

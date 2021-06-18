@@ -9,7 +9,7 @@ import user from './reducers/user'
 
 import Home from './components/pages/Home'
 import PetPosts from './components/pages/PetPosts'
-import PetPostDetails from './components/pages/PetPostDetails'
+// import PetPostDetails from './components/pages/PetPostDetails'
 import About from './components/pages/About'
 import PostForm from './components/PostForm'
 import Login from './components/pages/Login'

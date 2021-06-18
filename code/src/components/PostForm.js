@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+// import { useHistory } from 'react-router-dom';
+
+import { accessToken } from '../reducers/user'
+import { MainContainer, Form } from './styled-components/FormElements'
 
 const PostForm = () => {
   const [status, setStatus] = useState('')
@@ -10,13 +14,13 @@ const PostForm = () => {
   const [description, setDescription] = useState('')
   const [email, setEmail] = useState('')
 
-  const handleSubmit = (e) => {
+  const handleOnSubmit = (e) => {
     e.preventDefault();
     const post = { status, petName, species, breed, sex, location, description, email };
 
     fetch ('http://localhost:8080/petposts', {
       method: 'POST',
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", Authorization:  },
       body: JSON.stringify(post)
     })
     .then(() => {
@@ -25,12 +29,10 @@ const PostForm = () => {
   }
 
   return (
-    <div className="create-post">
+    <MainContainer className="create-post">
       <h2>Create a new post!</h2>
-      <form onSubmit={handleSubmit}>
-        <div 
-          className="radio-wrapper"
-          >
+      <Form onSubmit={handleOnSubmit}>
+        <div className="radio-wrapper">
           <label htmlFor="status">Pet Status:</label>
           <input 
             id="status"
@@ -93,34 +95,36 @@ const PostForm = () => {
           value={breed}
           onChange={(e) => setBreed(e.target.value)}
         />
-        <label htmlFor="sex">Sex:</label>
-        <input 
-          id="sex"
-          name="sexRadio"
-          type="radio"
-          required
-          value={sex}
-          onChange={(e) => setSex(e.target.value)}
-        />
-        <label htmlFor="sex">Female</label>
-        <input
-          id="sex"
-          name="sexRadio" 
-          type="radio"
-          required
-          value={sex}
-          onChange={(e) => setSex(e.target.value)}
-        />
-        <label htmlFor="sex">Male</label>
-        <input 
-          id="sex"
-          name="sexRadio"
-          type="radio"
-          required
-          value={sex}
-          onChange={(e) => setSex(e.target.value)}
-        />
-        <label htmlFor="other">Other</label>
+        <div className="radio-wrapper">
+          <label htmlFor="sex">Sex:</label>
+          <input 
+            id="sex"
+            name="sexRadio"
+            type="radio"
+            required
+            value={sex}
+            onChange={(e) => setSex(e.target.value)}
+          />
+          <label htmlFor="sex">Female</label>
+          <input
+            id="sex"
+            name="sexRadio" 
+            type="radio"
+            required
+            value={sex}
+            onChange={(e) => setSex(e.target.value)}
+          />
+          <label htmlFor="sex">Male</label>
+          <input 
+            id="sex"
+            name="sexRadio"
+            type="radio"
+            required
+            value={sex}
+            onChange={(e) => setSex(e.target.value)}
+          />
+          <label htmlFor="other">Other</label>
+        </div>
         <label htmlFor="location">Location:</label>
         <input 
           id="location"
@@ -149,8 +153,8 @@ const PostForm = () => {
         />
         <button type="submit">Add Post</button>
         <button>Cancel</button>
-      </form>
-    </div>
+      </Form>
+    </MainContainer>
   )
 }
 

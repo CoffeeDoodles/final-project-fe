@@ -32,7 +32,7 @@ const Register = () => {
   
   useEffect(() => {
     if (accessToken) {
-    history.push('/home')
+    history.push('/')
     }
   },[accessToken, history])
 
