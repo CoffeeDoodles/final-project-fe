@@ -3,9 +3,8 @@ import { useDispatch, useSelector, batch} from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import user from '../reducers/user'
-import { Nav, NavLink, Bars, NavMenu, ButtonWrapper } from './styled-components/NavbarElements';
-import { PrimaryButton } from './styled-components/FormElements'
-import CreatePostButton from './CreatePostButton';
+import Logo from './Logo';
+import { NavbarWrapper, NavLink, NavMenu, ButtonWrapper, Button } from './styled-components/NavbarElements';
 
 
 const Navbar = () => {
@@ -24,56 +23,66 @@ const Navbar = () => {
   if (accessToken) {
     return (  
       <>
-      <Nav>
-        <Bars />
+      <NavbarWrapper>
+        <div classname="logo-wrapper">
+          <Logo />        
+        </div>
         <NavMenu>
-        <NavLink to='/' activeStyle>
+        <ButtonWrapper>
+          <Link to="/create-post">
+            <Button className="create-button" type="submit">
+              New Post   
+            </Button>
+          </Link>
+        </ButtonWrapper>
+        <NavLink to='/'>
           Home
         </NavLink>
-        <NavLink to='/petposts' activeStyle>
-          Pet Posts
+        <NavLink to='/petposts'>
+          Posts
         </NavLink>
-        <NavLink to='/about-us' activeStyle>
+        <NavLink to='/about-us'>
           About Us
         </NavLink>
-        <NavLink to='/contact' activeStyle>
+        <NavLink to='/contact'>
           Contact
         </NavLink>
-        </NavMenu>
         <ButtonWrapper>
-          <CreatePostButton />
-          <PrimaryButton onClick={onButtonClick} > Logout </PrimaryButton>
+          <Button onClick={onButtonClick} > Logout </Button>
         </ButtonWrapper>
-      </Nav>
+        </NavMenu>
+      </NavbarWrapper>
       </>
     )
   } else { 
     return (  
 	<>
-	<Nav>
-		{/* <Bars /> */}
-		<NavMenu>
-		<NavLink to='/' >
-			Home
-		</NavLink>
-		<NavLink to='/petposts'>
-			Pet Posts
-		</NavLink>
-		<NavLink to='/about-us'>
-			About Us
-		</NavLink>
-		<NavLink to='/contact'>
-			Contact
-		</NavLink>
-		</NavMenu>
+	<NavbarWrapper>
+        <div classname="logo-wrapper">
+          <Logo />        
+        </div>
+        <NavMenu>
+        <NavLink to='/'>
+          Home
+        </NavLink>
+        <NavLink to='/petposts'>
+          Posts
+        </NavLink>
+        <NavLink to='/about-us'>
+          About Us
+        </NavLink>
+        <NavLink to='/contact'>
+          Contact
+        </NavLink>
+        </NavMenu>
     <ButtonWrapper>
           <Link to="/login">
-            <PrimaryButton>
+            <Button>
               Login
-            </PrimaryButton>
+            </Button>
           </Link>
     </ButtonWrapper>     
-	</Nav>
+	</NavbarWrapper>
 	</>
 )};
 };
