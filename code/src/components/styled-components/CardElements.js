@@ -1,61 +1,76 @@
 import styled from 'styled-components/macro'
 
-export const CardSection = styled.div`
-display: flex;
-justify-content: center;
-border: 2px solid red;
-`
-
-export const CardContainer = styled.div`
-background: #50B9CD;
-border-radius: 20px;
-border: 2px solid red;
-`
-
-export const Card = styled.div`
+export const CardWrapper = styled.div`
+  margin: 0;
+  padding: 20px;
+  border: 1px solid green;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background-color: pink;
-  width: 100px;
-  height: 100px;
-  margin-top: 30px;
-  border: 2px solid red;
+`
+export const Card = styled.article`
+  border: 1px solid red;
+  width: 300px;
+  height: 300px;
+  margin: 30px;
+  border-radius: 0 10px 10px 10px;
+  padding: 10px;
+  background-color: #50B9CD;
 `
 
-export const CardPreview = styled.div`
-  background: white;
+export const InnerCard = styled.div`
+  border: 1px solid red;
+  border-radius: 0 10px 10px 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
   width: 100%;
-  border-radius: 30px;
-  border: 2px solid red;
+  background-color: white;
 `
 
-export const Image = styled.div`
-height: 90px;
-color: white;
-background: black;
-margin-top: 20px;
-border: 2px solid red;
+export const ImageThumbnail = styled.div`
+  width: 100%;
+  height: 45%;
+  background-color: green;
+  overflow: hidden;
+  border-radius: 0 10px 0 0;
 `
 
-export const Status = styled.h5`
-  background: #FFB560;
-  border-radius: 40px;
+export const StatusTitle = styled.h1`
+  border-radius: 20px;
+  background-color: #FFB560;
+  color: white;
+  padding: 5px 15px;
+  font-size: 16px;
+  margin: 5px 0;
+  position: relative;
+  left: -90px;
+  width: 60px;
+  text-align: center;
+`
+
+export const TextWrapper = styled.div`
   display: flex;
-  width: 50px;
-  border: 2px solid red;
-  `
-
-export const Pet = styled.div`
-  display: flex;
-  flex-direction: row;
-  border: 2px solid red;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+`
+export const Text = styled.p`
+  color: #384E52;
+  margin: 0;
 `
 
-export const Species = styled.p`
-
+export const ImportantText = styled.h2`
+  margin: 5px 0;
+  color: #384E52;
+`
+export const Space = styled.span`
+  color: #384E52;
 `
 
-export const Location = styled.h3`
-
+export const LocationText = styled.p`
+  color: red;
+  margin: 0;
 `
