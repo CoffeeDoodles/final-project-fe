@@ -4,8 +4,6 @@ import Header from '../Header'
 import Footer from '../Footer'
 import HeroSection from '../HeroSection'
 import ArticleSection from '../ArticleSection'
-import RecentLostPets from '../cards/RecentLostPets'
-import RecentFoundPets from '../cards/RecentFoundPets'
 
 const Home = () => {
   return(
@@ -13,8 +11,6 @@ const Home = () => {
       <Header />
       <HeroSection />
       <ArticleSection />
-      <RecentLostPets />
-      <RecentFoundPets />
       <Footer />
     </>
   )

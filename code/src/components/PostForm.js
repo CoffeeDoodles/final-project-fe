@@ -28,7 +28,6 @@ const PostForm = () => {
       body: JSON.stringify(post)
     })
     .then(() => {
-      console.log('new post added')
       history.push('/petposts')
     })    
   }

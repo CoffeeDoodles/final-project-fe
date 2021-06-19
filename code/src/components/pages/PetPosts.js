@@ -1,28 +1,28 @@
 import React, { useState, useEffect } from 'react'
 
-import { CardThumbnail } from '../cards/CardThumbnail'
+// import { CardThumbnail } from '../cards/CardThumbnail'
+import CardList from '../cards/CardList';
 
 const PetPosts = () => {
-  const [ petList, setPetList ] = useState([]);
-  const [ error, setError ] = useState('');
+  const [ cards, setCards ] = useState(null);
+  // const [ error, setError ] = useState('');
+      
 
   useEffect(() => {
-    fetch("http://localhost:8080/petposts")
-      .then(res => res.json())
-      .then(json => setPetList(json.results))
-      .catch(err => {
-        setError(err)
+    fetch('http://localhost:8080/petposts')
+      .then(res => {
+        return res.json()
       })
-  }, [])
+      .then((data) => {
+        console.log(data);
+        setCards(data);
+      })
+    }, []);
+    
 
   return (
     <div className="pet-list-container">   
-        {petList.map(pets => {  
-            return (
-                <CardThumbnail {...pets} key={pets.id} />
-            )
-        })}
-        { error && <p>Something went not so great. Details {error}</p> }
+        {cards && <CardList cards={cards} title="Pets"/>}
     </div> 
   )
 }
