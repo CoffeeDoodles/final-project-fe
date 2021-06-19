@@ -1,13 +1,21 @@
-const CardList = ({ cards, title }) => {
+import { CardSection, Card, CardPreview, Image, Status, Pet, Species, Location } from '../styled-components/CardElements'
+
+const CardList = ({ cards }) => {
   return (
-    <div className="card-list">
-      <h2>{ title }</h2>
-      {cards.map((card) => (
-        <div className="card-preview" key={card.petCard._id}>
-          <h2>{ card.petCard.petName }</h2>
-          <p>Currently { card.petCard.status }</p>
-        </div>
-      ))}
+    <div>
+        {cards.map((card) => (
+          <Card>
+            <CardPreview key={card.petCard._id}>
+              <Image>Image</Image>
+              <Status>{ card.petCard.status }</Status>
+              <h2>" { card.petCard.petName } "</h2>
+              
+                <p>{ card.petCard.breed }</p>
+                { card.petCard.species }
+                { card.petCard.location }
+            </CardPreview>
+          </Card>
+        ))}     
     </div>
   )
 }

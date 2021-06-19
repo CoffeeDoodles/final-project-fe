@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from 'react'
 
+import styled from 'styled-components'
+
 // import { CardThumbnail } from '../cards/CardThumbnail'
 import CardList from '../cards/CardList';
+
+const BackgroundColor = styled.div`
+  background-color: pink;
+
+`
 
 const PetPosts = () => {
   const [ cards, setCards ] = useState(null);
@@ -21,9 +28,11 @@ const PetPosts = () => {
     
 
   return (
-    <div className="pet-list-container">   
-        {cards && <CardList cards={cards} title="Pets"/>}
-    </div> 
+    <BackgroundColor>
+      <div className="pet-list-container">   
+          {cards && <CardList cards={cards} title="Pets"/>}
+      </div> 
+    </BackgroundColor>
   )
 }
 
