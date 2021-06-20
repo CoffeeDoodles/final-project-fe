@@ -1,6 +1,12 @@
 
-import { CardWrapper, Card, InnerCard, ImageThumbnail, Space, StatusTitle, TextWrapper, Text, ImportantText, LocationText } from '../styled-components/CardElements'
+import { BiMap } from 'react-icons/bi'
+import { IconContext } from "react-icons";
+import styled from 'styled-components'
+
+import { CardWrapper, IconWrapper, Card, InnerCard, ImageThumbnail, Space, StatusTitle, TextWrapper, Text, ImportantText, LocationText } from '../styled-components/CardElements'
 import Logo from '../Logo';
+
+const style = { color: "teal", fontSize: "1.5em" }
 
 const CardList = ({ cards }) => {
   return (
@@ -23,7 +29,12 @@ const CardList = ({ cards }) => {
                    <Space> { card.petCard.species } </Space>
                   </ImportantText>
                   <LocationText>
-                    { card.petCard.location }
+                  {/* <IconContext.Provider value={{ fill: 'blue', size: '20px' }}> */}
+                    <IconWrapper>
+                      < BiMap style={style} className="location-icon"/>
+                    </IconWrapper>                   
+                  {/* </ IconContext.Provider> */}
+                   { card.petCard.location }
                   </LocationText>
                 </TextWrapper>
               </InnerCard>
@@ -32,5 +43,9 @@ const CardList = ({ cards }) => {
       </CardWrapper> 
   )
 }
+
+// const GrLocation  = styled(GrLocation)`
+//   color: skyblue;
+// `;
 
 export default CardList;

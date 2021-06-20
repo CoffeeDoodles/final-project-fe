@@ -3,7 +3,8 @@ body {
   font-family: 'Niramit', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F9FBFB;
+  background-image: url('./assets/background_pattern.jpg');
+  background-repeat: repeat;
   padding: 0;
 }
 
