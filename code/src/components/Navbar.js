@@ -1,11 +1,14 @@
 import React from 'react';
-import { useDispatch, useSelector, batch} from 'react-redux'
-import { Link } from 'react-router-dom'
+import { useDispatch, useSelector, batch} from 'react-redux';
+import { Link } from 'react-router-dom';
+import { FiMenu } from 'react-icons/fi';
 
-import user from '../reducers/user'
+import user from '../reducers/user';
 import Logo from './Logo';
-import { NavbarWrapper, NavLink, NavMenu, ButtonWrapper, Button } from './styled-components/NavbarElements';
+import { NavbarWrapper, LogoWrapper, HeaderLogo, NavLink, NavMenu, ButtonWrapper, Button } from './styled-components/NavbarElements';
+import logoImg from '../assets/logo.png';
 
+const style = { color: "white", fontSize: "2em" }
 
 const Navbar = () => {
   const dispatch = useDispatch()
@@ -23,10 +26,11 @@ const Navbar = () => {
   if (accessToken) {
     return (  
       <>
-      <NavbarWrapper>
-        <div classname="logo-wrapper">
-          <Logo />        
-        </div>
+      <NavbarWrapper> 
+        <LogoWrapper>
+          <FiMenu style={ style } /> 
+          <HeaderLogo src={logoImg} alt="petspotter-logo" />
+        </LogoWrapper>          
         <NavMenu>
         <ButtonWrapper>
           <Link to="/create-post">
@@ -58,9 +62,10 @@ const Navbar = () => {
     return (  
 	<>
 	<NavbarWrapper>
-        <div classname="logo-wrapper">
+        <LogoWrapper>
+          <FiMenu style={ style } />
           <Logo />        
-        </div>
+        </LogoWrapper>
         <NavMenu>
         <NavLink to='/'>
           Home

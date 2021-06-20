@@ -54,4 +54,16 @@ export const Button = styled.button`
   cursor: pointer;
 `
 
-;
+export const LogoWrapper = styled.div`
+  width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+`
+
+export const HeaderLogo = styled.img`
+  width: 70%;
+`
+

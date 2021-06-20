@@ -1,7 +1,5 @@
 
 import { BiMap } from 'react-icons/bi'
-import { IconContext } from "react-icons";
-import styled from 'styled-components'
 
 import { CardWrapper, IconWrapper, Card, InnerCard, ImageThumbnail, Space, StatusTitle, TextWrapper, Text, ImportantText, LocationText } from '../styled-components/CardElements'
 import Logo from '../Logo';
