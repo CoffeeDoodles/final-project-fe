@@ -4,9 +4,8 @@ import { Link } from 'react-router-dom';
 import { FiMenu } from 'react-icons/fi';
 
 import user from '../reducers/user';
-import Logo from './Logo';
 import { NavbarWrapper, LogoWrapper, HeaderLogo, NavLink, NavMenu, ButtonWrapper, Button } from './styled-components/NavbarElements';
-import logoImg from '../assets/logo.png';
+import logoImg from '../assets/logo.svg';
 
 const style = { color: "white", fontSize: "2em" }
 
@@ -64,7 +63,7 @@ const Navbar = () => {
 	<NavbarWrapper>
         <LogoWrapper>
           <FiMenu style={ style } />
-          <Logo />        
+          <HeaderLogo src={logoImg} alt="petspotter-logo" />     
         </LogoWrapper>
         <NavMenu>
         <NavLink to='/'>

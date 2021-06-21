@@ -2,7 +2,7 @@
 import { BiMap } from 'react-icons/bi'
 
 import { CardWrapper, IconWrapper, Card, InnerCard, ImageThumbnail, Space, StatusTitle, TextWrapper, Text, ImportantText, LocationText } from '../styled-components/CardElements'
-import Logo from '../Logo';
+import TestImage from '../../assets/poyapup.jpg';
 
 const style = { color: "teal", fontSize: "1.5em" }
 
@@ -13,7 +13,7 @@ const CardList = ({ cards }) => {
             <Card key={card.petCard._id}>
               <InnerCard>
                 <ImageThumbnail>
-                  <Logo />
+                  <TestImage />
                 </ImageThumbnail>
                 <StatusTitle>
                   { card.petCard.status }
