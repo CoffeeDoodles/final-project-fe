@@ -1,6 +1,7 @@
+import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components/macro'
 
-export const CardWrapper = styled.div`
+export const CardsWrapper = styled.div`
   margin: 0;
   padding: 20px;
   display: flex;
@@ -15,7 +16,11 @@ export const Card = styled.article`
   background-color: #50B9CD;
   box-sizing: border-box;
   box-shadow: 0 8px 6px -6px grey;
-  `
+`
+export const CardLink = styled(Link)`
+  text-decoration: none;
+  cursor: pointer;
+`
 
 export const InnerCard = styled.div`
   border-radius: 0 10px 10px 10px;
@@ -29,23 +34,29 @@ export const InnerCard = styled.div`
 
 export const ImageThumbnail = styled.div`
   width: 100%;
-  height: 45%;
+  height: 50%;
   background-color: green;
   overflow: hidden;
   border-radius: 0 10px 0 0;
 `
+export const Image = styled.img`
+  position: relative;
+  top: -100px;
+  left: -100px;
+`
 
 export const StatusTitle = styled.h1`
-  border-radius: 20px;
+  border-radius: 0 10px 10px 10px;
   background-color: #FFB560;
   color: white;
-  padding: 5px 15px;
-  font-size: 16px;
+  padding: 1px 8px;
+  font-size: 18px;
   margin: 5px 0;
   position: relative;
   left: -90px;
-  width: 60px;
-  text-align: center;
+  height: 35px;
+  width: 55px;
+  text-align: center;  
 `
 
 export const TextWrapper = styled.div`
@@ -53,7 +64,8 @@ export const TextWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 10px;
+  margin: 0;
+  width: 100%;
 `
 export const Text = styled.p`
   color: #384E52;
@@ -61,11 +73,12 @@ export const Text = styled.p`
 `
 
 export const ImportantText = styled.h2`
-  margin: 5px 0;
+  margin: 0;
   color: #384E52;
 `
 export const Space = styled.span`
   color: #384E52;
+  margin: 0 0.5rem;
 `
 
 export const LocationText = styled.p`

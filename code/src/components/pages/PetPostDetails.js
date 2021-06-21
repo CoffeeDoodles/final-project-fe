@@ -1,25 +1,32 @@
 import React, {useState, useEffect} from 'react'
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
-import useFetch from '../useFetch';
-
-import status from '../PostForm';
-
-
-const PetProfile = () => {
+const PetPostDetails = () => {
   const { id } = useParams();
-  const { data, error, isPending } = useFetch('http://localhost:8080/petposts/' + id )
+  const [details, setDetails] = useState([]);
 
+  const PET_DETAILS_URL = `http://localhost:8080/posts/${id}`
+ 
+  useEffect(() => {
+    fetch(PET_DETAILS_URL)
+      .then((res) => res.json())
+      .then((json) => setDetails(json));
+  }, [PET_DETAILS_URL]);
+
+  console.log('is this working?')
   return (
     <div className="main-container">
+      <Link to="/petposts" className="back-link">
+        <button>Go Back</button>
+      </Link>
       <div className="petpost-details">
-        { isPending && <div>Loading...</div> }
-        { error && <div>{ error }</div> }
+      COMING SOON
       </div>
-      <label>Status: {status}</label>
+      {details.status}
 
     </div>
+    
   )
 }
 
-export default PetProfile
+export default PetPostDetails

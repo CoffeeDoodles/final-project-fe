@@ -1,5 +1,4 @@
 import React from 'react';
-import { IconContext } from 'react-icons';
 import { FiMail, FiInstagram } from 'react-icons/fi';
 import { AiOutlineTwitter } from 'react-icons/ai';
 import { FaFacebookSquare } from 'react-icons/fa';

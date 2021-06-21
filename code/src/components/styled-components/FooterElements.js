@@ -2,7 +2,6 @@ import styled from "styled-components/macro";
 
 export const DesktopFooter = styled.section`
 background-color: #50B9CD;
-height: 200px;
 display: none;
 box-sizing: border-box;
 padding: 20px;

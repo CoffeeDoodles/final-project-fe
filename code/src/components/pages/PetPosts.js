@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 
-// import { CardThumbnail } from '../cards/CardThumbnail'
 import CardList from '../cards/CardList';
 
 const PetPosts = () => {

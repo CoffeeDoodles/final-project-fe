@@ -1,49 +1,50 @@
 
 import { BiMap } from 'react-icons/bi'
+import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
-import { CardWrapper, IconWrapper, Card, InnerCard, ImageThumbnail, Space, StatusTitle, TextWrapper, Text, ImportantText, LocationText } from '../styled-components/CardElements'
+import { CardsWrapper, IconWrapper, Card, CardLink, InnerCard, ImageThumbnail, Image, Space, StatusTitle, TextWrapper, Text, ImportantText, LocationText } from '../styled-components/CardElements'
 import TestImage from '../../assets/poyapup.jpg';
 
 const style = { color: "teal", fontSize: "1.5em" }
 
 const CardList = ({ cards }) => {
   return (
-      <CardWrapper>
+      <CardsWrapper>
         {cards.map((card) => (
-            <Card key={card.petCard._id}>
-              <InnerCard>
-                <ImageThumbnail>
-                  <TestImage />
-                </ImageThumbnail>
-                <StatusTitle>
-                  { card.petCard.status }
-                </StatusTitle>
-                <TextWrapper>
-                  <Text>
-                    "{ card.petCard.petName }"
-                  </Text>
-                  <ImportantText>
-                    { card.petCard.breed }
-                   <Space> { card.petCard.species } </Space>
-                  </ImportantText>
-                  <LocationText>
-                  {/* <IconContext.Provider value={{ fill: 'blue', size: '20px' }}> */}
-                    <IconWrapper>
-                      < BiMap style={style} className="location-icon"/>
-                    </IconWrapper>                   
-                  {/* </ IconContext.Provider> */}
-                   { card.petCard.location }
-                  </LocationText>
-                </TextWrapper>
-              </InnerCard>
-            </Card>
+          <Link to={`/pet/${card._id}`}>
+              <Card key={card.id}>             
+                <InnerCard>
+                  <ImageThumbnail>
+                    <Image src={TestImage} alt="poya the best pup"/>
+                  </ImageThumbnail>
+                  <StatusTitle>
+                    { card.petCard.status }
+                  </StatusTitle>
+                  <TextWrapper>
+                    <Text>
+                      "{ card.petCard.petName }"
+                    </Text>
+                    {/* <ImportantText> */}
+                      { card.petCard.breed }
+                    <Space>
+                      { card.petCard.species } 
+                    </Space>
+                    {/* </ImportantText> */}
+                    <LocationText>
+                      <IconWrapper>
+                        < BiMap style={style} className="location-icon"/>
+                      </IconWrapper>                   
+                    { card.petCard.location }
+                    </LocationText>
+                  </TextWrapper>
+                </InnerCard>
+              </Card>
+          </Link>       
         ))}     
-      </CardWrapper> 
+      </CardsWrapper> 
   )
 }
 
-// const GrLocation  = styled(GrLocation)`
-//   color: skyblue;
-// `;
 
 export default CardList;

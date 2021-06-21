@@ -4,12 +4,23 @@ import styled from 'styled-components/macro';
 export const NavbarWrapper = styled.div`
   background-color: #50B9CD;
   width: 100vw;
+  height: 15vh;
   display: flex;
   justify-content: space-between;  
   align-items: center;
   margin: 0;
-  font-size: 20px;
+  font-size: 26px;
+  font-weight: bold;
 `;
+
+export const MobileWrapper = styled.div`
+  margin: 0;
+  padding: 0;
+  display: flex;
+  @media (min-width: 768px) {
+    display: none;
+  }
+`
   
 export const NavLink = styled(Link)`
   color: #ffffff;
@@ -20,7 +31,7 @@ export const NavLink = styled(Link)`
   height: 100%;
   cursor: pointer;
   &.active {
-    color: #000000;
+    color: #FFB560;
   }
 `;
   
@@ -28,6 +39,7 @@ export const NavMenu = styled.nav`
   display: flex;
   align-items: center;
   margin-right: 5rem;
+  text-wrap: none;
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -61,9 +73,14 @@ export const LogoWrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding: 20px;
+  @media (min-width: 768px) {
+    position: relative;
+    top: 1rem;
+    left: -14rem;
+  }
 `
 
 export const HeaderLogo = styled.img`
-  width: 70%;
+  max-height: 90px;
 `
 
