@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 // import user from '../reducers/user'
 import { MainContainer, Form } from './styled-components/FormElements'
+import { ImageUpload } from './ImageUpload';
+
+const API_URL = 'http://localhost:8080/upload-images'
 
 const PostForm = () => {
   const [status, setStatus] = useState('')
@@ -17,19 +20,30 @@ const PostForm = () => {
 
   const accessToken = useSelector(store => store.user.accessToken)
   const history = useHistory()
+  const fileInput = useRef()
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
     const post = { status, petName, species, breed, sex, location, description, email };
 
-    fetch ('http://localhost:8080/petposts', {
-      method: 'POST',
-      headers: { "Content-Type": "application/json", Authorization: accessToken },
-      body: JSON.stringify(post)
-    })
-    .then(() => {
-      history.push('/petposts')
-    })    
+    const formData = new FormData()
+    formData.append('image', fileInput.current.files[0])
+
+    fetch(API_URL, { method: 'POST', body: formData })
+      .then((res) => res.json())
+      .then((json) => {
+        console.log(json)
+      })
+      .then (() => {
+        fetch ('http://localhost:8080/petposts', {
+          method: 'POST',
+          headers: { "Content-Type": "application/json", Authorization: accessToken },
+          body: JSON.stringify(post)
+        })
+        .then(() => {
+          history.push('/petposts')
+        })   
+      }) 
   }
 
   return (
@@ -65,6 +79,12 @@ const PostForm = () => {
             onChange={(e) => setStatus(e.target.value)}
           />
           <label htmlFor="returned-home">Returned Home</label>
+        </div>
+        <div>
+          <label htmlFor="petImage">
+          Pet Image
+          <input type="file" ref={fileInput} />
+          </label>
         </div>
         <label htmlFor="petName">Pet Name:</label>
         <input 

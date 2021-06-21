@@ -76,7 +76,7 @@ export const LogoWrapper = styled.div`
   @media (min-width: 768px) {
     position: relative;
     top: 1rem;
-    left: -14rem;
+    left: -5rem;
   }
 `
 
