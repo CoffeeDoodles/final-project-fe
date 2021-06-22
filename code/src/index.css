@@ -1,17 +1,32 @@
 @import url(//fonts.googleapis.com/earlyaccess/nats.css);
 
 body {
-  margin: 0;
   font-family: 'NATS', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url('./assets/background_pattern.jpg');
   background-repeat: repeat;
+  margin-bottom: 100px;
+  height: 100vh;
   padding: 0;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+@media (min-width: 758px) {
+  body {
+    margin-bottom: 200px;
+  }
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+  
 

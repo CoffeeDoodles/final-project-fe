@@ -1,16 +1,21 @@
 import styled from "styled-components/macro";
 
+
 export const DesktopFooter = styled.section`
-background-color: #50B9CD;
-display: none;
-box-sizing: border-box;
-padding: 20px;
-@media (min-width: 768px) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+  background-color: #50B9CD;
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 `
 export const ContactInfo = styled.div`
   margin: 0;
@@ -32,6 +37,11 @@ export const MobileFooter = styled.div`
   display: flex;
   background-color: #50B9CD;
   height: 100px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
   @media (min-width: 768px) {
     display: none;
   }  

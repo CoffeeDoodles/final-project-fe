@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 150px;
+  background-color: #50B9CD;
+  color: white;
+  padding: 20px;
+  z-index: 2;
+}
+
+.logo img {
+  height: 80px;
+  display: flex;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+
+}
+
+.nav-links {
+  display: none;
+}
+
+.nav-links-mobile {
+  position: absolute;
+  display: block;
+  list-style: none;
+  text-decoration: none;
+  background-color: #8FE0EF;
+  right: 30px;
+  top: 9rem;
+  transition: all 0.5s ease-out;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+
+.nav-links-mobile a li {
+  padding: 20px 0;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+.home, .about, .posts, .contact {
+  text-decoration: none;
+}
+
+.home:hover {
+  color: #FFB560;
+}
+
+.login, .create-button {
+  border: none;
+  background-color: #8FE0EF;
+  font-size: 30px;
+  width: 100%;
+  color: white;
+  height: 100%;
+  font-family: 'NATS', san-serf;
+}
+
+.login:hover, .create-button:hover {
+  background-color: #FFB560;
+}
+
+.create-button {
+  padding: 20px 0;
+}
+
+.login-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 20px 0;
+}
+
+.mobile-menu-icon {
+  display: block;
+  position: absolute;
+  color: white;
+  background-color: #50B9CD;
+  border: none;
+  top: 30px;
+  right: 30px;
+  
+}
+
+@media (min-width: 997px) {  
+
+  .logo img {
+    max-height: 100px;
+    position: absolute;
+    top: 14px;
+    left: 10px;
+
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    width: 75%;
+  }
+
+  .home,
+  .posts,
+  .about,
+  .contact {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;     
+  }
+  
+  .contact:hover, .home:hover, .posts:hover, .about:hover {
+    color: #FFB560;
+  }
+
+  .login, .create-button {
+    align-self: center;
+    color: white;
+    font-size: 22px;
+    border: 2px solid white;
+    padding: 4px 8px;
+    border-radius: 10px;
+    background-color: #8FE0EF;
+  }
+
+  .login-link {
+    align-self: center;
+  }
+
+  .login:hover, .create-button:hover {
+    background-color: #FFB560;
+  }
+
+  .nav-links-mobile {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: none;
+  }
+}

@@ -1,7 +1,5 @@
 
 import { BiMap } from 'react-icons/bi'
-import { Link } from 'react-router-dom';
-// import { Link } from 'react-router-dom';
 
 import { CardsWrapper, IconWrapper, Card, CardLink, InnerCard, ImageThumbnail, Image, Space, StatusTitle, TextWrapper, Text, ImportantText, LocationText } from '../styled-components/CardElements'
 import TestImage from '../../assets/poyapup.jpg';
@@ -12,7 +10,7 @@ const CardList = ({ cards }) => {
   return (
       <CardsWrapper>
         {cards.map((card) => (
-          <Link to={`/pet/${card._id}`}>
+          <CardLink to={`/pet/${card._id}`}>
               <Card key={card.id}>             
                 <InnerCard>
                   <ImageThumbnail>
@@ -25,12 +23,12 @@ const CardList = ({ cards }) => {
                     <Text>
                       "{ card.petCard.petName }"
                     </Text>
-                    {/* <ImportantText> */}
+                    <ImportantText>
                       { card.petCard.breed }
                     <Space>
                       { card.petCard.species } 
                     </Space>
-                    {/* </ImportantText> */}
+                    </ImportantText>
                     <LocationText>
                       <IconWrapper>
                         < BiMap style={style} className="location-icon"/>
@@ -40,7 +38,7 @@ const CardList = ({ cards }) => {
                   </TextWrapper>
                 </InnerCard>
               </Card>
-          </Link>       
+          </CardLink>       
         ))}     
       </CardsWrapper> 
   )

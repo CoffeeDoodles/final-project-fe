@@ -14,8 +14,10 @@ import About from './components/pages/About'
 import PostForm from './components/PostForm'
 import Login from './components/pages/Login'
 import Register from './components/pages/Register'
-import Navbar from './components/Navbar';
+// import Navbar from './components/Navbar';
+import TestNav from './components/WIP/TestNav';
 import Footer from './components/Footer';
+
 
 // 2. added form reducer in combineReducers
 const reducer = combineReducers({
@@ -29,19 +31,18 @@ const App = () => {
   return (
     <BrowserRouter>
       <Provider store={store}>
-        <div>
-          <Navbar />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/petposts" component={PetPosts} />
-            <Route path="/pet/:id" component={PetPostDetails} />
-            <Route path="/create-post" component={PostForm} />
-            <Route path="/about-us" component={About} /> 
-            <Route path="/register" component={Register} />
-            <Route path="/login" component={Login} />
-          </Switch>
-          <Footer />        
-        </div>
+        <TestNav />
+        {/* <Navbar /> */}
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/petposts" component={PetPosts} />
+          <Route path="/pet/:id" component={PetPostDetails} />
+          <Route path="/create-post" component={PostForm} />
+          <Route path="/about-us" component={About} /> 
+          <Route path="/register" component={Register} />
+          <Route path="/login" component={Login} />
+        </Switch>
+        <Footer />        
       </Provider>
     </BrowserRouter>
   );

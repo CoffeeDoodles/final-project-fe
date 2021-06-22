@@ -4,9 +4,9 @@ import { useHistory } from 'react-router-dom';
 
 // import user from '../reducers/user'
 import { MainContainer, Form } from './styled-components/FormElements'
-import { ImageUpload } from './ImageUpload';
 
-const API_URL = 'http://localhost:8080/upload-images'
+
+const IMAGE_API_URL = 'http://localhost:8080/upload-images'
 
 const PostForm = () => {
   const [status, setStatus] = useState('')
@@ -29,7 +29,7 @@ const PostForm = () => {
     const formData = new FormData()
     formData.append('image', fileInput.current.files[0])
 
-    fetch(API_URL, { method: 'POST', body: formData })
+    fetch(IMAGE_API_URL, { method: 'POST', body: formData })
       .then((res) => res.json())
       .then((json) => {
         console.log(json)

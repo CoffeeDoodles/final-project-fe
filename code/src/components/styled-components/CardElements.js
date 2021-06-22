@@ -67,7 +67,7 @@ export const TextWrapper = styled.div`
   margin: 0;
   width: 100%;
 `
-export const Text = styled.p`
+export const Text = styled.h3`
   color: #384E52;
   margin: 0;
 `
