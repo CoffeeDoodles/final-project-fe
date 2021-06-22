@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from 'react'
-import { useParams, Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom';
+
 
 const PetPostDetails = () => {
   const { id } = useParams();
@@ -15,18 +16,7 @@ const PetPostDetails = () => {
 
   return (
     <div className="main-container">
-      <h1>
-        {details.status}
-        
-      </h1>
-      <Link to="/petposts" className="back-link">
-        <button>Go Back</button>
-      </Link>
-      <div className="petpost-details">
-      COMING SOON
-      </div>
-
-
+     WIP
     </div>
   )
 }

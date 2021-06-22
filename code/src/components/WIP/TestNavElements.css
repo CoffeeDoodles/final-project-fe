@@ -1,6 +1,6 @@
-*{
-    margin: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .navbar {
@@ -8,7 +8,7 @@
   justify-content: space-around;
   align-items: center;
   height: 150px;
-  background-color: #50B9CD;
+  background-color: #50b9cd;
   color: white;
   padding: 20px;
   z-index: 2;
@@ -20,7 +20,6 @@
   position: absolute;
   top: 50px;
   left: 50px;
-
 }
 
 .nav-links {
@@ -32,14 +31,13 @@
   display: block;
   list-style: none;
   text-decoration: none;
-  background-color: #8FE0EF;
+  background-color: #8fe0ef;
   right: 30px;
   top: 9rem;
   transition: all 0.5s ease-out;
   width: 100%;
   padding-bottom: 20px;
 }
-
 
 .nav-links-mobile a li {
   padding: 20px 0;
@@ -50,26 +48,31 @@
   transition: all 0.5s ease;
 }
 
-.home, .about, .posts, .contact {
+.home,
+.about,
+.posts,
+.contact {
   text-decoration: none;
 }
 
 .home:hover {
-  color: #FFB560;
+  color: #ffb560;
 }
 
-.login, .create-button {
+.login,
+.create-button {
   border: none;
-  background-color: #8FE0EF;
+  background-color: #8fe0ef;
   font-size: 30px;
   width: 100%;
   color: white;
   height: 100%;
-  font-family: 'NATS', san-serf;
+  font-family: "NATS", san-serf;
 }
 
-.login:hover, .create-button:hover {
-  background-color: #FFB560;
+.login:hover,
+.create-button:hover {
+  background-color: #ffb560;
 }
 
 .create-button {
@@ -87,21 +90,18 @@
   display: block;
   position: absolute;
   color: white;
-  background-color: #50B9CD;
+  background-color: #50b9cd;
   border: none;
   top: 30px;
   right: 30px;
-  
 }
 
-@media (min-width: 997px) {  
-
+@media (min-width: 997px) {
   .logo img {
     max-height: 100px;
     position: absolute;
     top: 14px;
     left: 10px;
-
   }
 
   .nav-links {
@@ -120,29 +120,34 @@
     font-size: 25px;
     padding: 10px 20px;
     margin: 0 10px;
-    cursor: pointer;     
-  }
-  
-  .contact:hover, .home:hover, .posts:hover, .about:hover {
-    color: #FFB560;
+    cursor: pointer;
   }
 
-  .login, .create-button {
+  .contact:hover,
+  .home:hover,
+  .posts:hover,
+  .about:hover {
+    color: #ffb560;
+  }
+
+  .login,
+  .create-button {
     align-self: center;
     color: white;
     font-size: 22px;
     border: 2px solid white;
     padding: 4px 8px;
     border-radius: 10px;
-    background-color: #8FE0EF;
+    background-color: #8fe0ef;
   }
 
   .login-link {
     align-self: center;
   }
 
-  .login:hover, .create-button:hover {
-    background-color: #FFB560;
+  .login:hover,
+  .create-button:hover {
+    background-color: #ffb560;
   }
 
   .nav-links-mobile {

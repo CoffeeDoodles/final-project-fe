@@ -1,31 +1,30 @@
-import React from 'react';
-import { Provider } from 'react-redux'
-import { configureStore, combineReducers } from '@reduxjs/toolkit'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import React from "react";
+import { Provider } from "react-redux";
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 // 1. added import form
-import form from './reducers/form'
-import user from './reducers/user'
+import form from "./reducers/form";
+import user from "./reducers/user";
 
-import Home from './components/pages/Home'
-import PetPosts from './components/pages/PetPosts'
-import PetPostDetails from './components/pages/PetPostDetails'
-import About from './components/pages/About'
-import PostForm from './components/PostForm'
-import Login from './components/pages/Login'
-import Register from './components/pages/Register'
+import Home from "./components/pages/Home";
+import PetPosts from "./components/pages/PetPosts";
+import PetPostDetails from "./components/pages/PetPostDetails";
+import About from "./components/pages/About";
+import PostForm from "./components/PostForm";
+import Login from "./components/pages/Login";
+import Register from "./components/pages/Register";
 // import Navbar from './components/Navbar';
-import TestNav from './components/WIP/TestNav';
-import Footer from './components/Footer';
-
+import TestNav from "./components/WIP/TestNav";
+import Footer from "./components/Footer";
 
 // 2. added form reducer in combineReducers
 const reducer = combineReducers({
   user: user.reducer,
-  form: form.reducer
-})
+  form: form.reducer,
+});
 
-const store = configureStore({ reducer })
+const store = configureStore({ reducer });
 
 const App = () => {
   return (
@@ -38,14 +37,14 @@ const App = () => {
           <Route path="/petposts" component={PetPosts} />
           <Route path="/pet/:id" component={PetPostDetails} />
           <Route path="/create-post" component={PostForm} />
-          <Route path="/about-us" component={About} /> 
+          <Route path="/about-us" component={About} />
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
         </Switch>
-        <Footer />        
+        <Footer />
       </Provider>
     </BrowserRouter>
   );
-}
+};
 
 export default App;

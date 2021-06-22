@@ -1,12 +1,12 @@
-import { NavLink as Link } from 'react-router-dom';
-import styled from 'styled-components/macro';
-  
+import { NavLink as Link } from "react-router-dom";
+import styled from "styled-components/macro";
+
 export const NavbarWrapper = styled.div`
-  background-color: #50B9CD;
+  background-color: #50b9cd;
   width: 100vw;
   height: 15vh;
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
   align-items: center;
   margin: 0;
   font-size: 26px;
@@ -20,8 +20,8 @@ export const MobileWrapper = styled.div`
   @media (min-width: 768px) {
     display: none;
   }
-`
-  
+`;
+
 export const NavLink = styled(Link)`
   color: #ffffff;
   display: flex;
@@ -31,10 +31,10 @@ export const NavLink = styled(Link)`
   height: 100%;
   cursor: pointer;
   &.active {
-    color: #FFB560;
+    color: #ffb560;
   }
 `;
-  
+
 export const NavMenu = styled.nav`
   display: flex;
   align-items: center;
@@ -44,13 +44,12 @@ export const NavMenu = styled.nav`
     display: none;
   }
 `;
-  
 
 export const ButtonWrapper = styled.div`
   margin: 0 2rem;
   padding: 0;
   width: 130px;
-`
+`;
 export const Button = styled.button`
   border-radius: 10px;
   font-size: 16px;
@@ -59,12 +58,12 @@ export const Button = styled.button`
   margin: 10px 5px 10px 0;
   padding: 10px 20px;
   border: 3px solid white;
-  background-color: #8FE0EF;
+  background-color: #8fe0ef;
   &:hover {
-    background-color: #D1F8FF;
+    background-color: #d1f8ff;
   }
   cursor: pointer;
-`
+`;
 
 export const LogoWrapper = styled.div`
   width: 100%;
@@ -78,9 +77,8 @@ export const LogoWrapper = styled.div`
     top: 1rem;
     left: -5rem;
   }
-`
+`;
 
 export const HeaderLogo = styled.img`
   max-height: 90px;
-`
-
+`;

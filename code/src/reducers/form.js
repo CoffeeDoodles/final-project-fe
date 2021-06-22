@@ -1,18 +1,18 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 const form = createSlice({
-  name: 'form',
+  name: "form",
   initialState: {
-    petposts: []
+    petposts: [],
   },
   reducers: {
     setPetPosts: (store, action) => {
-      store.petposts = action.payload
+      store.petposts = action.payload;
     },
     setAddSinglePost: (store, action) => {
-      store.petposts = [...store.petposts, action.payload]
+      store.petposts = [...store.petposts, action.payload];
     },
-  }
-})
+  },
+});
 
-export default form
+export default form;

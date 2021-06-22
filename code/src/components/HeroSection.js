@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components/macro'
+import styled from "styled-components/macro";
 
 import heroImg from '../assets/hero.jpg'
 
@@ -10,7 +10,6 @@ const HeroContent = styled.div`
     height: 100vh;
     margin: 0;
 `
-
 
 const HeroSection = () => {
     return(
