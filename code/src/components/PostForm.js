@@ -32,10 +32,7 @@ const PostForm = () => {
     fetch(IMAGE_API_URL, { method: 'POST', body: formData })
       .then((res) => res.json())
       .then ((json) => {
-        console.log(post)
         post["imageUrl"] = json.imageUrl
-        console.log(post)
-        // post.push({'petUrl': json.imageUrl})
         fetch ('http://localhost:8080/petposts', {
           method: 'POST',
           headers: { "Content-Type": "application/json", Authorization: accessToken },
