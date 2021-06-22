@@ -13,19 +13,21 @@ const PetPostDetails = () => {
       .then((json) => setDetails(json));
   }, [PET_DETAILS_URL]);
 
-  console.log('is this working?')
   return (
     <div className="main-container">
+      <h1>
+        {details.status}
+        
+      </h1>
       <Link to="/petposts" className="back-link">
         <button>Go Back</button>
       </Link>
       <div className="petpost-details">
       COMING SOON
       </div>
-      {details.status}
+
 
     </div>
-    
   )
 }
 

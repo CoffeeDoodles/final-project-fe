@@ -14,6 +14,7 @@ const CardList = ({ cards }) => {
               <Card key={card.id}>             
                 <InnerCard>
                   <ImageThumbnail>
+                  {/* <img src={card.petImage.imageUrl} /> */}
                     <Image src={TestImage} alt="poya the best pup"/>
                   </ImageThumbnail>
                   <StatusTitle>
