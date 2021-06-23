@@ -87,7 +87,3 @@ export const LocationText = styled.p`
   display: flex;
   flex-direction: row;
 `;
-
-export const IconWrapper = styled.div`
-  margin-right: 5px;
-`;

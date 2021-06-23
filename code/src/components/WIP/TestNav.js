@@ -5,7 +5,7 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import Logo from "../../assets/logo.svg";
 import "./TestNavElements.css";
 
-const style = { fontSize: "6em", color: "white" };
+const style = { fontSize: "5em", color: "white" };
 
 const TestNav = () => {
   const [isMobile, setIsMobile] = useState(false);

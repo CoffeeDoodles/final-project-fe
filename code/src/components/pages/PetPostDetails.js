@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 
 const PetPostDetails = () => {
@@ -12,28 +12,47 @@ const PetPostDetails = () => {
   useEffect(() => {
     fetch(PET_DETAILS_URL)
       .then((res) => res.json())
-      .then((data) => setDetails(data));
+      .then((res) => setDetails(res));
   }, [PET_DETAILS_URL]);
 
   return (
-    <CardsWrapper className="main-container">
-     <p> Status: {details.status}</p>
-    </CardsWrapper>
+    <CardWrapper className="main-container">
+      <Card>
+        <InnerCard>
+          <ImageWrapper>
+            Image Here
+            <img src={details.petCard?.imageUrl} alt="pet"/>
+          </ImageWrapper>
+          <InfoContainer>
+            <Wrapper>
+              <StatusTitle>
+                Status Here
+              </StatusTitle>
+              <p>Time Posted Here</p>
+            </Wrapper>
+            <Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer eget aliquet nibh praesent tristique magna. Nulla facilisi etiam dignissim diam quis. In est ante in nibh. Massa vitae tortor condimentum lacinia quis vel. Tortor at auctor urna nunc id cursus. Orci nulla pellentesque dignissim enim sit. Aliquam vestibulum morbi blandit cursus risus at ultrices.
+            </Text>
+         </InfoContainer>
+       </InnerCard>
+       <CardDescription>
+         <Text>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer eget aliquet nibh praesent tristique magna. Nulla facilisi etiam dignissim diam quis. In est ante in nibh. Massa vitae tortor condimentum lacinia quis vel. Tortor at auctor urna nunc id cursus. Orci nulla pellentesque dignissim enim sit. Aliquam vestibulum morbi blandit cursus risus at ultrices.
+         </Text>
+       </CardDescription>
+     </Card>
+    </CardWrapper>
   )
 }
 
 export default PetPostDetails
 
-const CardsWrapper = styled.main`
+const CardWrapper = styled.main`
   margin: 0;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
 `;
 const Card = styled.article`
-  width: 300px;
-  height: 300px;
-  margin: 30px;
+  width: 100%;
   border-radius: 0 10px 10px 10px;
   padding: 5px 10px 10px 5px;
   background-color: #50b9cd;
@@ -45,8 +64,56 @@ const InnerCard = styled.div`
   border-radius: 0 10px 10px 10px;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
+  flex-direction: row;
   background-color: white;
+  min-height: 300px;
 `;
+
+const CardDescription = styled.div`
+  border-radius: 0 10px 10px 10px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  margin-top: 16px;
+`;
+
+
+const InfoContainer = styled.section`
+  width: 50%;
+  min-height: 300px;
+  background-color: grey;
+  border-radius: 0 10px 10px 0;
+`;
+
+const StatusTitle = styled.h1`
+  border-radius: 0 10px 10px 10px;
+  background-color: #ffb560;
+  color: white;
+  padding: 1px 8px;
+  font-size: 18px;
+  margin: 5px 0;
+  text-align: center;
+`;
+
+const ImageWrapper = styled.div `
+  width: 50%;
+  background-color: pink;
+`;
+
+const Image = styled.img`
+  object-fit: cover;
+`;
+
+const Text = styled.p`
+  word-wrap; break-word;
+`
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+`
+

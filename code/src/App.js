@@ -28,22 +28,22 @@ const store = configureStore({ reducer });
 
 const App = () => {
   return (
-    <BrowserRouter>
       <Provider store={store}>
-        <TestNav />
-        {/* <Navbar /> */}
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/petposts" component={PetPosts} />
-          <Route path="/pet/:id" component={PetPostDetails} />
-          <Route path="/create-post" component={PostForm} />
-          <Route path="/about-us" component={About} />
-          <Route path="/register" component={Register} />
-          <Route path="/login" component={Login} />
-        </Switch>
-        <Footer />
+        <BrowserRouter>
+          <TestNav />
+          {/* <Navbar /> */}
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/petposts" component={PetPosts} />
+            <Route path="/pet/:id" component={PetPostDetails} />
+            <Route path="/create-post" component={PostForm} />
+            <Route path="/about" component={About} />
+            <Route path="/register" component={Register} />
+            <Route path="/login" component={Login} />
+          </Switch>
+          <Footer />
+        </BrowserRouter>
       </Provider>
-    </BrowserRouter>
   );
 };
 

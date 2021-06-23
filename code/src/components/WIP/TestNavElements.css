@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 150px;
+  height: 130px;
   background-color: #50b9cd;
   color: white;
   padding: 20px;
@@ -15,11 +15,10 @@
 }
 
 .logo img {
-  height: 80px;
-  display: flex;
+  max-width: 14em;
   position: absolute;
-  top: 50px;
-  left: 50px;
+  top: 40px;
+  left: 20px;
 }
 
 .nav-links {
@@ -32,21 +31,23 @@
   list-style: none;
   text-decoration: none;
   background-color: #8fe0ef;
-  right: 30px;
-  top: 9rem;
+  right: 0;
+  top: 8rem;
   transition: all 0.5s ease-out;
   width: 100%;
-  padding-bottom: 20px;
+  padding: 0;
 }
 
-.nav-links-mobile a li {
-  padding: 20px 0;
+.nav-links-mobile a {
+  padding: 0;
   color: white;
   font-size: 30px;
   text-align: center;
   width: 100%;
   transition: all 0.5s ease;
 }
+
+
 
 .home,
 .about,
@@ -55,8 +56,8 @@
   text-decoration: none;
 }
 
-.home:hover {
-  color: #ffb560;
+.home:hover, .about:hover, .posts:hover, .contact:hover {
+  color: #384E52;
 }
 
 .login,
@@ -73,10 +74,10 @@
 .login:hover,
 .create-button:hover {
   background-color: #ffb560;
-}
+} 
 
-.create-button {
-  padding: 20px 0;
+ .create-button {
+  padding: 0;
 }
 
 .login-link {
@@ -92,8 +93,8 @@
   color: white;
   background-color: #50b9cd;
   border: none;
-  top: 30px;
-  right: 30px;
+  top: 25px;
+  right: 20px;
 }
 
 @media (min-width: 997px) {

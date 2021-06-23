@@ -2,7 +2,6 @@ import { BiMap } from "react-icons/bi";
 
 import {
   CardsWrapper,
-  IconWrapper,
   Card,
   CardLink,
   InnerCard,
@@ -22,10 +21,10 @@ const CardList = ({ cards }) => {
   return (
     <CardsWrapper>
       {cards.map((card) => (
-        <CardLink to={`/pet/${card._id}`}>
+        <CardLink to={`/pet/${card._id}`} key={card.id}>
           <Card key={card.id}>
-            <InnerCard key={card.innerCard}>
-              <ImageThumbnail key={card.imageUrl}>
+            <InnerCard >
+              <ImageThumbnail >
                 <Image
                   src={card.petCard.imageUrl}
                   alt="petImg"
@@ -40,13 +39,11 @@ const CardList = ({ cards }) => {
                   <Space key={card.species}>{card.petCard.species}</Space>
                 </ImportantText>
                 <LocationText key={card.location}>
-                  <IconWrapper key={card.icon}>
                     <BiMap
                       style={style}
                       className="location-icon"
-                      key={card.icon}
+                      key={card.location}
                     />
-                  </IconWrapper>
                   {card.petCard.location}
                 </LocationText>
               </TextWrapper>
