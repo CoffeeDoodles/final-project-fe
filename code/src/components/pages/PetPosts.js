@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 
 import CardList from "../cards/CardList";
-import { API_URL } from "../../reuseables/urls";
+import { REACT_APP_BASE_URL } from "../../reuseables/urls";
 
-const PET_API_URL = `${API_URL}/petposts`;
+// const PET_API_URL = `${API_URL}/petposts`;
 
 const PetPosts = () => {
   const [cards, setCards] = useState(null);
 
   useEffect(() => {
-    fetch(PET_API_URL)
+    fetch(`${REACT_APP_BASE_URL}/petposts`)
       .then((res) => {
         return res.json();
       })

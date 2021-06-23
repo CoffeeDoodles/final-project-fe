@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components/macro';
 
-import { API_URL } from '../../reuseables/urls';
+import { REACT_APP_BASE_URL } from '../../reuseables/urls';
 
 
 
@@ -10,7 +10,7 @@ const PetPostDetails = () => {
   const { id } = useParams();
   const [details, setDetails] = useState({});
 
-  const PET_DETAILS_URL = `${API_URL}/${id}`
+  const PET_DETAILS_URL = `${REACT_APP_BASE_URL}/${id}`
  
   useEffect(() => {
     fetch(PET_DETAILS_URL)

@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
-import { API_URL } from "../reuseables/urls";
+import { REACT_APP_BASE_URL } from "../reuseables/urls";
 import { MainContainer, Form } from "./styled-components/FormElements";
 
 const IMAGE_API_URL = `https://pet-spotter.herokuapp.com/upload-images`;
