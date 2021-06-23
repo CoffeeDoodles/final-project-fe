@@ -5,7 +5,7 @@ import UserNav from "./NavBar/UserNav"
 import GuestNav from "./NavBar/GuestNav"
 
 
-const Navbar = () => {
+const Nav = () => {
   const accessToken = useSelector((store) => store.user.accessToken);
 
   if (accessToken) {
@@ -19,5 +19,5 @@ const Navbar = () => {
   }
 };
 
-export default Navbar;
+export default Nav;
 
