@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import { API_URL } from "../reuseables/urls";
 import { MainContainer, Form } from "./styled-components/FormElements";
 
-const IMAGE_API_URL = `${API_URL}/upload-images`;
+const IMAGE_API_URL = `https://pet-spotter.herokuapp.com/upload-images`;
 
 
 const PostForm = () => {
@@ -31,7 +31,7 @@ const PostForm = () => {
     fetch(IMAGE_API_URL, { method: "POST", body: formData })
       .then((res) => res.json())
       .then(({ imageUrl }) => {
-        fetch(`${API_URL}/petposts`, {
+        fetch(`https://pet-spotter.herokuapp.com/petposts`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
