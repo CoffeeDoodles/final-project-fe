@@ -37,7 +37,7 @@ const App = () => {
           <Route path="/petposts" component={PetPosts} />
           <Route path="/pet/:id" component={PetPostDetails} />
           <Route path="/create-post" component={PostForm} />
-          <Route path="/about-us" component={About} />
+          <Route path="/about" component={About} />
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
         </Switch>
