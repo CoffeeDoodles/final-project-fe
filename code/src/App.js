@@ -29,6 +29,7 @@ const store = configureStore({ reducer });
 const App = () => {
   return (
       <Provider store={store}>
+<<<<<<< HEAD
         <BrowserRouter>
           <TestNav />
           {/* <Navbar /> */}
@@ -43,6 +44,20 @@ const App = () => {
           </Switch>
           <Footer />
         </BrowserRouter>
+=======
+        <TestNav />
+        {/* <Navbar /> */}
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/petposts" component={PetPosts} />
+          <Route path="/pet/:id" component={PetPostDetails} />
+          <Route path="/create-post" component={PostForm} />
+          <Route path="/about" component={About} />
+          <Route path="/register" component={Register} />
+          <Route path="/login" component={Login} />
+        </Switch>
+        <Footer />
+>>>>>>> 52ddf3b5558ef9556f030e50d235e0ba0b58629b
       </Provider>
   );
 };
