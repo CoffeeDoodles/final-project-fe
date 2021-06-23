@@ -6,7 +6,7 @@ import { API_URL } from "../reuseables/urls";
 import { MainContainer, Form } from "./styled-components/FormElements";
 
 const IMAGE_API_URL = `${API_URL}/upload-images`;
-const POST_URL = `${API_URL}/petposts`;
+
 
 const PostForm = () => {
   const [status, setStatus] = useState("");
@@ -31,7 +31,7 @@ const PostForm = () => {
     fetch(IMAGE_API_URL, { method: "POST", body: formData })
       .then((res) => res.json())
       .then(({ imageUrl }) => {
-        fetch(POST_URL, {
+        fetch(`${API_URL}/petposts`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
