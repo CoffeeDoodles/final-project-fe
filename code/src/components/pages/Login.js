@@ -3,7 +3,7 @@ import { useSelector, useDispatch, batch } from "react-redux";
 import { useHistory, Link } from "react-router-dom";
 
 import user from "../../reducers/user";
-import { PETS_API_URL } from "../../reuseables/urls";
+import { REACT_APP_BASE_URL } from "../../reuseables/urls";
 import {
   InputField,
   Label,
@@ -17,6 +17,8 @@ import {
   Text,
   ErrorMessage,
 } from "../styled-components/FormElements";
+
+const API_URL = `${REACT_APP_BASE_URL}/login`;
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -45,7 +47,7 @@ const Login = () => {
       },
       body: JSON.stringify({ username, password }),
     };
-    fetch(PETS_API_URL(mode), options)
+    fetch(API_URL(mode), options)
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {

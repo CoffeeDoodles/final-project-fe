@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 
 import CardList from "../cards/CardList";
+import { REACT_APP_BASE_URL } from "../../reuseables/urls";
+
+const API_URL = `${REACT_APP_BASE_URL}/petposts`;
 
 const PetPosts = () => {
   const [cards, setCards] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8080/petposts")
+    fetch(API_URL)
       .then((res) => {
         return res.json();
       })

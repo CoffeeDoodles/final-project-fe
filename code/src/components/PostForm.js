@@ -2,9 +2,11 @@ import React, { useState, useRef } from "react";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
+import { REACT_APP_BASE_URL } from "../reuseables/urls";
 import { MainContainer, Form } from "./styled-components/FormElements";
 
-const IMAGE_API_URL = "http://localhost:8080/upload-images";
+const IMAGE_API_URL = `${REACT_APP_BASE_URL}/upload-images`;
+const API_URL = `${REACT_APP_BASE_URL}/petposts`;
 
 const PostForm = () => {
   const [status, setStatus] = useState("");
@@ -29,7 +31,7 @@ const PostForm = () => {
     fetch(IMAGE_API_URL, { method: "POST", body: formData })
       .then((res) => res.json())
       .then(({ imageUrl }) => {
-        fetch("http://localhost:8080/petposts", {
+        fetch(API_URL, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
