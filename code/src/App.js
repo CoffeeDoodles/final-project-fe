@@ -14,7 +14,7 @@ import About from "./components/pages/About";
 import PostForm from "./components/PostForm";
 import Login from "./components/pages/Login";
 import Register from "./components/pages/Register";
-// import Navbar from './components/Navbar';
+import Navbar from './components/Navbar';
 import TestNav from "./components/WIP/TestNav";
 import Footer from "./components/Footer";
 
@@ -30,8 +30,8 @@ const App = () => {
   return (
       <Provider store={store}>
         <BrowserRouter>
-          <TestNav />
-          {/* <Navbar /> */}
+          {/* <TestNav /> */}
+          <Navbar />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/petposts" component={PetPosts} />
