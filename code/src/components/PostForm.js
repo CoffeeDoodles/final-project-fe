@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import { REACT_APP_BASE_URL } from "../reuseables/urls";
 import { MainContainer, Form } from "./styled-components/FormElements";
 
-const IMAGE_API_URL = `https://pet-spotter.herokuapp.com/upload-images`;
+const IMAGE_API_URL = `${REACT_APP_BASE_URL}/upload-images`;
 
 
 const PostForm = () => {

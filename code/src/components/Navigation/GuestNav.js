@@ -46,9 +46,7 @@ const GuestNav = () => {
         )}
       </button>
     </nav>
-  )
-}
+  );
+};
 
-
-
-export default GuestNav
+export default GuestNav;

@@ -4,38 +4,41 @@ import styled from 'styled-components/macro';
 
 import { REACT_APP_BASE_URL } from '../../reuseables/urls';
 
-
-
 const PetPostDetails = () => {
   const { id } = useParams();
   const [details, setDetails] = useState({});
 
-  const PET_DETAILS_URL = `${REACT_APP_BASE_URL}/${id}`
+  const REACT_APP_DETAILS_URL = `${REACT_APP_BASE_URL}/${id}`
  
   useEffect(() => {
-    fetch(PET_DETAILS_URL)
+    fetch(REACT_APP_DETAILS_URL)
       .then((res) => res.json())
       .then((res) => setDetails(res));
-  }, [PET_DETAILS_URL]);
+  }, [REACT_APP_DETAILS_URL]);
 
   return (
     <CardWrapper className="main-container">
       <Card>
         <InnerCard>
           <ImageWrapper>
-            Image Here
-            <img src={details.petCard?.imageUrl} alt="pet"/>
+            <Image src={details.petCard?.imageUrl} alt="pet"/>
           </ImageWrapper>
           <InfoContainer>
             <Wrapper>
               <StatusTitle>
-                Status Here
+                {details.petCard?.status}
               </StatusTitle>
-              <p>Time Posted Here</p>
+
             </Wrapper>
-            <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer eget aliquet nibh praesent tristique magna. Nulla facilisi etiam dignissim diam quis. In est ante in nibh. Massa vitae tortor condimentum lacinia quis vel. Tortor at auctor urna nunc id cursus. Orci nulla pellentesque dignissim enim sit. Aliquam vestibulum morbi blandit cursus risus at ultrices.
-            </Text>
+            <h1>{details.petCard?.petName}</h1>
+            <h2>{details.petCard?.sex}</h2>
+            <h2>{details.petCard?.breed}</h2>
+            <h2>{details.petCard?.species}</h2>
+            <div>
+              <p>Last Seen: {details.petCard?.location}</p>
+            </div>
+            
+            
          </InfoContainer>
        </InnerCard>
        <CardDescription>

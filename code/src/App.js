@@ -14,8 +14,7 @@ import About from "./components/pages/About";
 import PostForm from "./components/PostForm";
 import Login from "./components/pages/Login";
 import Register from "./components/pages/Register";
-import Navbar from './components/Navbar';
-import TestNav from "./components/WIP/TestNav";
+import Navbar from './components/Navigation/Navbar';
 import Footer from "./components/Footer";
 
 // 2. added form reducer in combineReducers
@@ -30,7 +29,6 @@ const App = () => {
   return (
       <Provider store={store}>
         <BrowserRouter>
-          {/* <TestNav /> */}
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home} />

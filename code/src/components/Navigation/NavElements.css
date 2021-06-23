@@ -47,8 +47,6 @@
   transition: all 0.5s ease;
 }
 
-
-
 .home,
 .about,
 .posts,
@@ -56,11 +54,15 @@
   text-decoration: none;
 }
 
-.home:hover, .about:hover, .posts:hover, .contact:hover {
-  color: #384E52;
+.home:hover,
+.about:hover,
+.posts:hover,
+.contact:hover {
+  color: #384e52;
 }
 
 .login,
+.logout,
 .create-button {
   border: none;
   background-color: #8fe0ef;
@@ -72,12 +74,20 @@
 }
 
 .login:hover,
+.logout:hover,
 .create-button:hover {
   background-color: #ffb560;
-} 
+}
 
- .create-button {
+.create-button {
   padding: 0;
+}
+
+.create-link {
+  margin: 0;
+  padding: 0;
+  height: 60px;
+  align-self: center;
 }
 
 .login-link {
@@ -101,8 +111,7 @@
   .logo img {
     max-height: 100px;
     position: absolute;
-    top: 14px;
-    left: 10px;
+    margin-left: 20px;
   }
 
   .nav-links {
@@ -132,21 +141,29 @@
   }
 
   .login,
+  .logout,
   .create-button {
     align-self: center;
+    max-width: 100px;
     color: white;
     font-size: 22px;
     border: 2px solid white;
-    padding: 4px 8px;
+    padding: 2px 8px;
     border-radius: 10px;
     background-color: #8fe0ef;
   }
 
-  .login-link {
+  .create-link, .login-link {
+    margin: 0;
+    padding: 0;
+    height: 60px;
     align-self: center;
+    width: 100px;
   }
 
+
   .login:hover,
+  .logout:hover,
   .create-button:hover {
     background-color: #ffb560;
   }

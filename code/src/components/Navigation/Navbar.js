@@ -1,23 +1,17 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-import UserNav from "./NavBar/UserNav"
-import GuestNav from "./NavBar/GuestNav"
-
+import UserNav from "./UserNav";
+import GuestNav from "./GuestNav";
 
 const Navbar = () => {
   const accessToken = useSelector((store) => store.user.accessToken);
 
   if (accessToken) {
-    return (
-        <UserNav />
-    );
+    return <UserNav />;
   } else {
-    return (
-      <GuestNav />
-    );
+    return <GuestNav />;
   }
 };
 
 export default Navbar;
-
