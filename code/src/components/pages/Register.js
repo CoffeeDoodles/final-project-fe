@@ -4,7 +4,7 @@ import { useHistory, Link } from 'react-router-dom'
 
 import user from '../../reducers/user'
 
-import { REACT_APP_BASE_URL } from '../../reuseables/urls'
+import { API_URL } from '../../reuseables/urls'
 import { 
   MainContainer,
   Header, 
@@ -19,7 +19,6 @@ import {
   InputWrapper 
 } from '../styled-components/FormElements'
 
-const API_URL = `${REACT_APP_BASE_URL}/register-user`;
 
 const Register = () => {
   const [username, setUsername] = useState('')

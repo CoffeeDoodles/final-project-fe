@@ -3,7 +3,7 @@ import { useSelector, useDispatch, batch } from "react-redux";
 import { useHistory, Link } from "react-router-dom";
 
 import user from "../../reducers/user";
-import { REACT_APP_BASE_URL } from "../../reuseables/urls";
+import { API_URL } from "../../reuseables/urls";
 import {
   InputField,
   Label,
@@ -18,7 +18,7 @@ import {
   ErrorMessage,
 } from "../styled-components/FormElements";
 
-const API_URL = `${REACT_APP_BASE_URL}/login`;
+
 
 const Login = () => {
   const [username, setUsername] = useState("");
