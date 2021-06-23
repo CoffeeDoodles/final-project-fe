@@ -19,7 +19,7 @@ import {
   InputWrapper 
 } from '../styled-components/FormElements'
 
-const API_URL = `${REACT_APP_BASE_URL}/register`;
+const API_URL = `${REACT_APP_BASE_URL}/register-user`;
 
 const Register = () => {
   const [username, setUsername] = useState('')
@@ -48,7 +48,7 @@ const Register = () => {
       },
       body: JSON.stringify({ username, password }) 
     }
-    fetch (`${REACT_APP_BASE_URL}/register`(mode), options)
+    fetch (API_URL(mode), options)
       .then(res => res.json())
       .then(data => {
         if (data.success) {
