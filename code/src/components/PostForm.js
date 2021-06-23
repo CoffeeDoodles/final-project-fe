@@ -2,11 +2,11 @@ import React, { useState, useRef } from "react";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
-import { REACT_APP_BASE_URL } from "../reuseables/urls";
+import { API_URL } from "../reuseables/urls";
 import { MainContainer, Form } from "./styled-components/FormElements";
 
-const IMAGE_API_URL = `${REACT_APP_BASE_URL}/upload-images`;
-const API_URL = `${REACT_APP_BASE_URL}/petposts`;
+const IMAGE_API_URL = `${API_URL}/upload-images`;
+
 
 const PostForm = () => {
   const [status, setStatus] = useState("");

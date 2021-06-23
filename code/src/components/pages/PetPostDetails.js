@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components/macro';
 
-import { REACT_APP_BASE_URL } from '../../reuseables/urls';
+import { API_URL } from '../../reuseables/urls';
 
-const API_URL = `${REACT_APP_BASE_URL}/posts`;
 
 
 const PetPostDetails = () => {
