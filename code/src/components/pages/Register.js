@@ -48,7 +48,7 @@ const Register = () => {
       },
       body: JSON.stringify({ username, password }) 
     }
-    fetch (API_URL(mode), options)
+    fetch (`${REACT_APP_BASE_URL}/register`(mode), options)
       .then(res => res.json())
       .then(data => {
         if (data.success) {
