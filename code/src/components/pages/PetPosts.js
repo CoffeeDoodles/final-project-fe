@@ -9,7 +9,7 @@ const PetPosts = () => {
   const [cards, setCards] = useState(null);
 
   useEffect(() => {
-    fetch(`${REACT_APP_BASE_URL}petposts`)
+    fetch(`${REACT_APP_BASE_URL}/petposts`)
       .then((res) => {
         return res.json();
       })
