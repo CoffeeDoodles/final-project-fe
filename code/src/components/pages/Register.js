@@ -66,7 +66,7 @@ const Register = () => {
         }
       })
       .catch()
-    }
+  }
 
   return (
     <MainContainer>
