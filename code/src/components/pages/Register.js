@@ -4,7 +4,7 @@ import { useHistory, Link } from 'react-router-dom'
 
 import user from '../../reducers/user'
 
-import { API_URL } from '../../reuseables/urls'
+import { REACT_APP_BASE_URL } from '../../reuseables/urls'
 import { 
   MainContainer,
   Header, 
@@ -47,7 +47,7 @@ const Register = () => {
       },
       body: JSON.stringify({ username, password }) 
     }
-    fetch (API_URL(mode), options)
+    fetch (REACT_APP_BASE_URL(mode), options)
       .then(res => res.json())
       .then(data => {
         if (data.success) {

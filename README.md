@@ -1,56 +1,67 @@
-# Project Title
-WIP For now!
-Simple overview of use/purpose.
+# Project Title: PetSpotters
+Developers: Elaine Bergstrom & Malin Goethe
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+ We wanted to create a website using React and Redux that allowed users to post for lost or found pets in their area. Basically a digital version of putting up lost posters but on the internet. We wanted users to be able to search for animals they had lost, post lost pets, or post pets they had found with no owner.
 
 ## Getting Started
 
 ### Dependencies
+BACKEND:
+*Node.js 
+*Express
+*Mongoose
+*MongoDB
+*Cloudinary
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+FRONTEND:
+*React
+*Redux
+*React-dom
+*React-router-dom
+*React-icons
+*React-toolkit
+*React-scripts
+*Styled-components
+*npm-js
 
-### Installing
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+*Backend - npm run dev (Starts Server)
+*Frontend - cd petspotter-fe/code
+          - npm start (starts local React Server)
 
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
 
 ## Authors
 
-Contributors names and contact info
+<a href="#" >
+Elaine Bergstrom
+</a>
+
+<a href="#" >
+Malin Goethe
+</a>
+
+## Project Log/Issues/Fixes
+
+  
 
 
 
-## Version History
+## If We Had More Time/For the Future:
 
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
-
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+  *Add searchability among the cards
+  *Add a comment section to individual posts
+  *Add private chatting to user
+  *Users can edit/delete/update their own posts
+  *Display more recently lost/found pets on home page
+  *have a contact form page
+  *Conditional styling for cards based on status of pet.
 
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
+Huge thank you to Technigo's Maksymilian Olszewski, Marie Alesund, Poya Tavakolian,
+Matilda Arvidsson for all their help putting out our code fires. Another big thanks to our mentor
+Evelin Foxell for helping us understand backend coding better!
