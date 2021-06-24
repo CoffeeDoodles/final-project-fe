@@ -31,7 +31,7 @@ const PostForm = () => {
     fetch(IMAGE_API_URL, { method: "POST", body: formData })
       .then((res) => res.json())
       .then(({ imageUrl }) => {
-        fetch(`https://pet-spotter.herokuapp.com/petposts`, {
+        fetch(`${REACT_APP_BASE_URL}/petposts`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
