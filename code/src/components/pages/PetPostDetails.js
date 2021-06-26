@@ -8,13 +8,13 @@ const PetPostDetails = () => {
   const { id } = useParams();
   const [details, setDetails] = useState({});
 
-  const REACT_APP_DETAILS_URL = `${REACT_APP_BASE_URL}/${id}`
+  const DETAILS_URL = `${REACT_APP_BASE_URL}/posts/${id}`
  
   useEffect(() => {
-    fetch(REACT_APP_DETAILS_URL)
+    fetch(DETAILS_URL)
       .then((res) => res.json())
       .then((res) => setDetails(res));
-  }, [REACT_APP_DETAILS_URL]);
+  }, [DETAILS_URL]);
 
   return (
     <CardWrapper className="main-container">
