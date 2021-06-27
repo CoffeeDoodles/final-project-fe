@@ -9,7 +9,7 @@ export const DesktopFooter = styled.section`
   bottom: 0;
   overflow: hidden;
   display: none;
-  @media (min-width: 768px) {
+  @media (min-width: 991px) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +41,7 @@ export const MobileFooter = styled.div`
   left: 0;
   bottom: 0;
   overflow: hidden;
-  @media (min-width: 768px) {
+  @media (min-width: 991px) {
     display: none;
   }
 `;

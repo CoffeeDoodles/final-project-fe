@@ -3,10 +3,19 @@ import styled from "styled-components/macro";
 
 export const CardsWrapper = styled.div`
   margin: 0;
-  padding: 20px;
+  padding: 0px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 768px){
+    flex-direction: row;
+    margin: 30px;
+  }
 `;
+
 export const Card = styled.article`
   width: 300px;
   height: 300px;
@@ -16,6 +25,7 @@ export const Card = styled.article`
   background-color: #50b9cd;
   box-sizing: border-box;
   box-shadow: 0 8px 6px -6px grey;
+ 
 `;
 export const CardLink = styled(Link)`
   text-decoration: none;
@@ -30,6 +40,7 @@ export const InnerCard = styled.div`
   height: 100%;
   width: 100%;
   background-color: white;
+  font-family: "Nunito", sans-serif;
 `;
 
 export const ImageThumbnail = styled.div`
@@ -40,22 +51,18 @@ export const ImageThumbnail = styled.div`
   border-radius: 0 10px 0 0;
 `;
 export const Image = styled.img`
-  position: relative;
-  top: -100px;
-  left: -100px;
+  text-align: center;
 `;
 
 export const StatusTitle = styled.h1`
   border-radius: 0 10px 10px 10px;
   background-color: #ffb560;
   color: white;
-  padding: 1px 8px;
+  padding: 2px 16px;
   font-size: 18px;
-  margin: 5px 0;
   position: relative;
-  left: -90px;
-  height: 35px;
-  width: 55px;
+  left: -6rem;
+  margin: 5px 0;
   text-align: center;
 `;
 

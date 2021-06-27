@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import CardList from "../cards/CardList";
 import { REACT_APP_BASE_URL } from "../../reuseables/urls";
+import { MainContainer, ListContainer, Title } from "../styled-components/PetListElements";
 
 
 const PetPosts = () => {
@@ -19,10 +20,24 @@ const PetPosts = () => {
   }, []);
 
   return (
-    <div className="pet-list-container">
-      {cards && <CardList cards={cards} title="Pets" />}
-    </div>
+    <>
+      <MainContainer> 
+        <Title>Pet Postings</Title>         
+        <ListContainer className="pet-list-container">        
+          {cards && <CardList cards={cards} title="Pets" />}
+        </ListContainer>      
+        <Title>
+          <span role="img" aria-label="heart">❤️ </span>
+          Returned Home
+          <span role="img" aria-label="heart"> ❤️</span>
+        </Title>       
+        <ListContainer>
+        </ListContainer>
+      </MainContainer>
+    </>
   );
 };
 
 export default PetPosts;
+
+

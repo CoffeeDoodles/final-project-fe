@@ -15,26 +15,26 @@ const GuestNav = () => {
       <Link to="/" className="logo">
         <img src={Logo} alt="logo" />
       </Link>
-      <ul
+      <div
         className={isMobile ? "nav-links-mobile" : "nav-links"}
         onClick={() => setIsMobile(false)}
       >
         <Link to="/" className="home">
-          <li>Home</li>
+          <p>Home</p>
         </Link>
         <Link to="/petposts" className="posts">
-          <li>Posts</li>
+          <p>Posts</p>
         </Link>
         <Link to="/about" className="about">
-          <li>About</li>
+          <p>About</p>
         </Link>
         <Link to="/contact" className="contact">
-          <li>Contact</li>
+          <p>Contact</p>
         </Link>
         <Link to="/login" className="login-link">
           <button className="login">Login</button>
         </Link>
-      </ul>
+      </div>
       <button
         className="mobile-menu-icon"
         onClick={() => setIsMobile(!isMobile)}
