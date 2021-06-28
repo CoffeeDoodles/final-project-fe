@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 
 import { REACT_APP_BASE_URL } from "../reuseables/urls";
 import { MainContainer, Form } from "./styled-components/FormElements";
+import CircleLoader from "./CircleLoader";
 
 const IMAGE_API_URL = `${REACT_APP_BASE_URL}/upload-images`;
 
@@ -17,6 +18,7 @@ const PostForm = () => {
   const [location, setLocation] = useState("");
   const [description, setDescription] = useState("");
   const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const accessToken = useSelector((store) => store.user.accessToken);
   const history = useHistory();
@@ -50,6 +52,7 @@ const PostForm = () => {
           }),
         }).then(() => {
           history.push("/petposts");
+          setIsLoading(false);
         });
       });
   };
@@ -174,7 +177,9 @@ const PostForm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <button type="submit">Add Post</button>
+        <button type="submit" disabled={isLoading}>
+          Add Post
+        </button>
         <button>Cancel</button>
       </Form>
     </MainContainer>

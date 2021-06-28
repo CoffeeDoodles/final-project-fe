@@ -46,12 +46,11 @@ export const InnerCard = styled.div`
 export const ImageThumbnail = styled.div`
   width: 100%;
   height: 50%;
-  background-color: green;
   overflow: hidden;
   border-radius: 0 10px 0 0;
 `;
 export const Image = styled.img`
-  text-align: center;
+  
 `;
 
 export const StatusTitle = styled.h1`

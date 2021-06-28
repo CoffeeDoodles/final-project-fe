@@ -29,6 +29,7 @@ const CardList = ({ cards }) => {
                   src={card.petCard.imageUrl}
                   alt="petImg"
                   key={card.imageUrl}
+                  className="center-thumbnail"
                 />
               </ImageThumbnail>
               <StatusTitle key={card.status}>{card.petCard.status}</StatusTitle>

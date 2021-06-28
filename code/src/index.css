@@ -18,7 +18,7 @@ html {
   
 }
 
-@media (min-width: 758px) {
+@media (min-width: 991px) {
   body {
     margin-bottom: 200px;
   }
@@ -27,4 +27,15 @@ html {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.MuiCircularProgress-colorPrimary {
+  color: #FFB560 !important;
+}
+
+.center-thumbnail {
+  display: block;
+  position: relative;
+  top: -50%;
+  left: -25%;
 }
