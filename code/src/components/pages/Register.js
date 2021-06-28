@@ -12,7 +12,7 @@ import {
   Label, 
   InputField, 
   Text, 
-  SecondaryButtonContainer, 
+  ButtonContainer, 
   PrimaryButton, 
   SecondaryButton, 
   ErrorMessage, 
@@ -90,6 +90,7 @@ const Register = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
         </InputWrapper>
+        <ButtonContainer>
         {error && <ErrorMessage>{error.message}</ErrorMessage>}
         <PrimaryButton
           type='submit'
@@ -97,7 +98,7 @@ const Register = () => {
         >
           Register
         </PrimaryButton>
-        <SecondaryButtonContainer>
+        <div>
           <Text>
             Already registered? 
           </Text>
@@ -106,7 +107,8 @@ const Register = () => {
               Login
             </SecondaryButton>
           </Link>
-        </SecondaryButtonContainer>
+        </div>
+        </ButtonContainer>
       </Form>
     </MainContainer>
   )

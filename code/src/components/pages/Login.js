@@ -16,6 +16,7 @@ import {
   SecondaryButton,
   Text,
   ErrorMessage,
+  ButtonContainer
 } from "../styled-components/FormElements";
 
 
@@ -91,6 +92,7 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </InputWrapper>
+        <ButtonContainer>
         {error && <ErrorMessage>{error.message}</ErrorMessage>}
         <PrimaryButton
           type="submit"
@@ -98,12 +100,13 @@ const Login = () => {
         >
           Login
         </PrimaryButton>
-        <SecondaryButtonContainer>
+        <div>
           <Text>Register as a PetSpotter?</Text>
           <Link to="/register">
             <SecondaryButton>Register</SecondaryButton>
           </Link>
-        </SecondaryButtonContainer>
+        </div>
+        </ButtonContainer>
       </Form>
     </MainContainer>
   );

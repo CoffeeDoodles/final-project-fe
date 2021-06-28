@@ -79,11 +79,6 @@ export const Label = styled.label`
   color: white;
 `;
 
-export const SecondaryButtonContainer = styled.div`
-  width: 90%;
-  margin-top: 15px;
-  text-align: center;
-`;
 
 export const Text = styled.p`
   font-weight: 300;
@@ -91,16 +86,21 @@ export const Text = styled.p`
 `;
 
 export const ButtonContainer = styled.div`
-  width: 90%;
+  width: 100%;
   margin-bottom: 40px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 `;
 
 export const PrimaryButton = styled.button`
+  font-family: "Nunito", sans-serif;
   border-radius: 10px;
   font-size: 20px;
-  font-weight: 200;
-  width: 50%;
+  font-weight: bold;
+  width: 8rem;
+  color: white;
   margin: 10px 0 10px 0;
   padding: 10px 20px;
   border: 3px solid white;
@@ -112,10 +112,11 @@ export const PrimaryButton = styled.button`
 `;
 
 export const SecondaryButton = styled.button`
+  font-family: "Nunito", sans-serif;
   border-radius: 10px;
   font-size: 20px;
   font-weight: 200;
-  width: 50%;
+  width: 8rem;
   margin-bottom: 30px;
   padding: 10px 20px;
   border: 3px solid white;
@@ -127,13 +128,12 @@ export const SecondaryButton = styled.button`
 `;
 
 export const ErrorMessage = styled.div`
-  border: 1px solid red;
   border-radius: 20px;
   font-size: 16px;
   font-weight: 300;
   width: fit-content;
   padding: 10px;
-  border: 2px solid rgb(123, 104, 238);
+  background-color: #FFB560;
 `;
 
 export const ButtonWrapper = styled.div`
