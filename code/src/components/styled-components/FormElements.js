@@ -5,6 +5,9 @@ export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Nunito", sans-serif;
+  box-sizing: content-box;
+  margin-top: 5rem;
 `;
 
 export const Header = styled.h1`
@@ -27,7 +30,7 @@ export const TextArea = styled.textarea`
 `;
 
 export const InputField = styled.input`
-  border-radius: 10px;
+  border-radius: 0 10px 10px 10px;
   width: 100%;
   margin: 15px 0;
   box-sizing: border-box;
@@ -43,24 +46,37 @@ export const Form = styled.form`
   flex-direction: column;
   border: 3px solid white;
   border-radius: 20px;
-  align-items: center;
-  margin: 60px auto;
+  align-items: flex-start;
+  margin: 30px auto;
   padding: 10px;
   background-color: #54b0c1;
   @media (min-width: 768px) {
     max-width: 650px;
-    margin: 150px auto;
+    margin: 30px auto;
   }
 `;
 export const InputWrapper = styled.div`
   text-align: left;
   margin: 0 auto;
+  height: auto;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+`;
+
+export const TitleLabel = styled.label`
+  font-weight: bold;
+  padding: 10px 10px 0 0;
+  font-size: 18px;
+  color: white;
+  border-bottom: 2px solid white;
+  margin-bottom: 16px;
 `;
 
 export const Label = styled.label`
-  font-weight: 300;
-  margin-bottom: 10px;
-  margin-right: 16px;
+  font-weight: bold;
+  padding: 10px 10px 10px 0;
+  color: white;
 `;
 
 export const SecondaryButtonContainer = styled.div`
@@ -120,21 +136,37 @@ export const ErrorMessage = styled.div`
   border: 2px solid rgb(123, 104, 238);
 `;
 
+export const ButtonWrapper = styled.div`
+  height: auto;
+  width: 100%;
+  padding: 16px
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
 export const Wrapper = styled.div`
   height: auto;
   width: 100%;
-  padding: 6px;
+  padding: 16px;
   box-sizing: border-box;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
 `;
 
 export const RadioWrapper = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+`;
+
+export const RadioDiv = styled.div`
+  margin-left: 3rem;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  height: 48px;
 `;
 // styled radio? stretch goal?
 export const RadioButton = styled.input`
@@ -142,4 +174,15 @@ export const RadioButton = styled.input`
   width: 24px;
   height: 24px;
   margin-right: 10px;
+`;
+
+export const SelectField = styled.select`
+  text-align: left;
+  margin: 20px auto;
+  width: 100%;
+  height: 3rem;
+  border-radius: 0 10px 10px 10px;
+  border: none;
+  background-color: white;
+  font-family: "Nunito", sans-serif;
 `;

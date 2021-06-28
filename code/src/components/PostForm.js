@@ -3,11 +3,26 @@ import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
 import { REACT_APP_BASE_URL } from "../reuseables/urls";
-import { MainContainer, Form } from "./styled-components/FormElements";
-import CircleLoader from "./CircleLoader";
+import {
+  MainContainer,
+  RadioButton,
+  RadioDiv,
+  TitleLabel,
+  Form,
+  Header,
+  TextArea,
+  InputField,
+  Wrapper,
+  RadioWrapper,
+  InputWrapper,
+  Label,
+  SelectField,
+  PrimaryButton,
+  SecondaryButton,
+  ButtonWrapper,
+} from "./styled-components/FormElements";
 
 const IMAGE_API_URL = `${REACT_APP_BASE_URL}/upload-images`;
-
 
 const PostForm = () => {
   const [status, setStatus] = useState("");
@@ -59,128 +74,158 @@ const PostForm = () => {
 
   return (
     <MainContainer className="create-post">
-      <h2>Create a new post!</h2>
+      <Header>Create a new post!</Header>
       <Form onSubmit={handleOnSubmit}>
-        <div className="radio-wrapper">
-          <label htmlFor="status">Pet Status:</label>
-          <input
-            id="statusLost"
-            name="statusRadio"
-            type="radio"
-            required
-            value="lost"
-            onChange={(e) => setStatus(e.target.value)}
+        <Wrapper>
+          <TitleLabel htmlFor="status">Pet Status:</TitleLabel>
+          <RadioWrapper className="radio-wrapper">
+            <RadioDiv>
+              <RadioButton
+                id="statusLost"
+                name="statusRadio"
+                type="radio"
+                required
+                value="lost"
+                onChange={(e) => setStatus(e.target.value)}
+              />
+              <Label htmlFor="status">Lost</Label>
+            </RadioDiv>
+            <RadioDiv>
+              <RadioButton
+                id="statusFound"
+                name="statusRadio"
+                type="radio"
+                required
+                value="found"
+                onChange={(e) => setStatus(e.target.value)}
+              />
+              <Label htmlFor="status">Found</Label>
+            </RadioDiv>
+            <RadioDiv>
+              <RadioButton
+                id="statusReturned"
+                name="statusRadio"
+                type="radio"
+                required
+                value="returned"
+                onChange={(e) => setStatus(e.target.value)}
+              />
+              <Label htmlFor="returned-home">Returned Home</Label>
+            </RadioDiv>
+          </RadioWrapper>
+        </Wrapper>
+        <InputWrapper>
+          <TitleLabel htmlFor="petImage">Pet Image</TitleLabel>
+          <InputField type="file" ref={fileInput} />
+        </InputWrapper>
+        <InputWrapper>
+          <TitleLabel htmlFor="petName">Pet Name:</TitleLabel>
+          <InputField
+            id="petName"
+            type="text"
+            value={petName}
+            onChange={(e) => setPetName(e.target.value)}
           />
-          <label htmlFor="status">Lost</label>
-          <input
-            id="statusFound"
-            name="statusRadio"
-            type="radio"
+        </InputWrapper>
+        <InputWrapper>
+          <TitleLabel htmlFor="species">Species:</TitleLabel>
+          <SelectField
+            id="species"
+            value={species}
+            onChange={(e) => setSpecies(e.target.value)}
+          >
+            <option defaultValue>Select an Species (More coming soon!)</option>
+            <option value="Dog">Dog</option>
+            <option value="Cat">Cat</option>
+          </SelectField>
+        </InputWrapper>
+        <InputWrapper>
+          <TitleLabel htmlFor="breed">Breed:</TitleLabel>
+          <InputField
+            id="breed"
+            type="text"
             required
-            value="found"
-            onChange={(e) => setStatus(e.target.value)}
+            value={breed}
+            onChange={(e) => setBreed(e.target.value)}
           />
-          <label htmlFor="status">Found</label>
-          <input
-            id="statusReturned"
-            name="statusRadio"
-            type="radio"
+        </InputWrapper>
+        <Wrapper className="radio-wrapper">
+          <TitleLabel htmlFor="sex">Sex:</TitleLabel>
+          <RadioWrapper>
+            <RadioDiv>
+              <RadioButton
+                id="sexFemale"
+                name="sexRadio"
+                type="radio"
+                required
+                value="female"
+                onChange={(e) => setSex(e.target.value)}
+              />
+              <Label htmlFor="sex">Female</Label>
+            </RadioDiv>
+            <RadioDiv>
+              <RadioButton
+                id="sexMale"
+                name="sexRadio"
+                type="radio"
+                required
+                value="male"
+                onChange={(e) => setSex(e.target.value)}
+              />
+              <Label htmlFor="sex">Male</Label>
+            </RadioDiv>
+            <RadioDiv>
+              <RadioButton
+                id="sexOther"
+                name="sexRadio"
+                type="radio"
+                required
+                value="other"
+                onChange={(e) => setSex(e.target.value)}
+              />
+              <Label htmlFor="other">Other</Label>
+            </RadioDiv>
+          </RadioWrapper>
+        </Wrapper>
+        <InputWrapper>
+          <TitleLabel htmlFor="location">Location:</TitleLabel>
+          <InputField
+            id="location"
+            type="text"
             required
-            value="returned"
-            onChange={(e) => setStatus(e.target.value)}
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
           />
-          <label htmlFor="returned-home">Returned Home</label>
-        </div>
-        <div>
-          <label htmlFor="petImage">
-            Pet Image
-            <input type="file" ref={fileInput} />
-          </label>
-        </div>
-        <label htmlFor="petName">Pet Name:</label>
-        <input
-          id="petName"
-          type="text"
-          value={petName}
-          onChange={(e) => setPetName(e.target.value)}
-        />
-        <label htmlFor="species">Species:</label>
-        <select
-          id="species"
-          value={species}
-          onChange={(e) => setSpecies(e.target.value)}
-        >
-          <option defaultValue>Select an Species (More coming soon!)</option>
-          <option value="Dog">Dog</option>
-          <option value="Cat">Cat</option>
-        </select>
-        <label htmlFor="breed">Breed:</label>
-        <input
-          id="breed"
-          type="text"
-          required
-          value={breed}
-          onChange={(e) => setBreed(e.target.value)}
-        />
-        <div className="radio-wrapper">
-          <label htmlFor="sex">Sex:</label>
-          <input
-            id="sexFemale"
-            name="sexRadio"
-            type="radio"
-            required
-            value="female"
-            onChange={(e) => setSex(e.target.value)}
-          />
-          <label htmlFor="sex">Female</label>
-          <input
-            id="sexMale"
-            name="sexRadio"
-            type="radio"
-            required
-            value="male"
-            onChange={(e) => setSex(e.target.value)}
-          />
-          <label htmlFor="sex">Male</label>
-          <input
-            id="sexOther"
-            name="sexRadio"
-            type="radio"
-            required
-            value="other"
-            onChange={(e) => setSex(e.target.value)}
-          />
-          <label htmlFor="other">Other</label>
-        </div>
-        <label htmlFor="location">Location:</label>
-        <input
-          id="location"
-          type="text"
-          required
-          value={location}
-          onChange={(e) => setLocation(e.target.value)}
-        />
-        <label htmlFor="description">Description:</label>
-        <textarea
-          id="description"
-          placeholder="Please describe in as much detail as possible.
+        </InputWrapper>
+        <InputWrapper>
+          <TitleLabel htmlFor="description">
+            Description of Pet:
+          </TitleLabel>
+          <TextArea
+            id="description"
+            placeholder="Please describe in as much detail as possible.
            Fur color/patterns, eye color, distinguishing marks etc."
-          required
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        ></textarea>
-        <label htmlFor="email">Contact Email:</label>
-        <input
-          id="email"
-          type="email"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <button type="submit" disabled={isLoading}>
-          Add Post
-        </button>
-        <button>Cancel</button>
+            required
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          />
+        </InputWrapper>
+        <InputWrapper>
+          <TitleLabel htmlFor="email">Contact Email:</TitleLabel>
+          <InputField
+            id="email"
+            type="email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </InputWrapper>
+        <ButtonWrapper>
+          <PrimaryButton type="submit" disabled={isLoading}>
+            Add Post
+          </PrimaryButton>
+          <SecondaryButton>Cancel</SecondaryButton>
+        </ButtonWrapper>
       </Form>
     </MainContainer>
   );
