@@ -21,7 +21,7 @@ const PetPostDetails = () => {
       <Card>
         <InnerCard>
           <ImageWrapper>
-            <Image src={details.petCard?.imageUrl} alt="pet"/>
+            <Image src={details.petCard?.imageUrl} className="center-image" alt="pet"/>
           </ImageWrapper>
           <InfoContainer>
             <Wrapper>
@@ -43,7 +43,7 @@ const PetPostDetails = () => {
        </InnerCard>
        <CardDescription>
          <Text>
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer eget aliquet nibh praesent tristique magna. Nulla facilisi etiam dignissim diam quis. In est ante in nibh. Massa vitae tortor condimentum lacinia quis vel. Tortor at auctor urna nunc id cursus. Orci nulla pellentesque dignissim enim sit. Aliquam vestibulum morbi blandit cursus risus at ultrices.
+         {details.petCard?.description}
          </Text>
        </CardDescription>
      </Card>

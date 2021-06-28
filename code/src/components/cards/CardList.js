@@ -17,12 +17,13 @@ import {
 
 const style = { color: "teal", fontSize: "1.5em" };
 
+
 const CardList = ({ cards }) => {
   return (
     <CardsWrapper>
       {cards.map((card) => (
         <CardLink to={`/pet/${card._id}`} key={card.id}>
-          <Card key={card.id}>
+          <Card key={card.id} >
             <InnerCard >
               <ImageThumbnail >
                 <Image

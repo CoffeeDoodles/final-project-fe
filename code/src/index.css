@@ -20,7 +20,7 @@ html {
 
 @media (min-width: 991px) {
   body {
-    margin-bottom: 200px;
+    margin-bottom: 250px;
   }
 }
 
@@ -39,3 +39,4 @@ code {
   top: -50%;
   left: -25%;
 }
+
