@@ -1,35 +1,37 @@
 import React from "react";
-import styled from "styled-components/macro";
+import { IoIosArrowForward } from "react-icons/io";
 
 import hugImg from "../assets/article.jpg";
+import {
+  ArticleContainer,
+  Image,
+  Title,
+  PostLink,
+  Text,
+  TextWrapper,
+  IconWrapper,
+} from "./styled-components/ArticleElements";
 
-const ArticleContainer = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column-reverse;
-  max-height: 600px;
-  padding: 16px;
-`;
-
-const Image = styled.img`
-  height: 200px;
-`
-
-const Text = styled.p`
-  color: #384e52;
-  font-size: 20px;
-`;
+const style = { color: "#FFB560", fontSize: "2em", margin: "0 0 0 -18px" };
 
 const ArticleSection = () => {
   return (
     <>
       <ArticleContainer>
         <Image alt="kittenhug" className="article-img" src={hugImg} />
-        <Text>
-          Our goal is to help reunite the lost pets of the world to their
-          rightful families. Help us help you!
-          <a href="description">Pet Postings</a>
-        </Text>
+        <TextWrapper>
+          <Text>
+            Our goal is to help reunite the lost pets of the world to their
+            rightful families. Help us help you!
+          </Text>
+          <PostLink to="/petposts">
+            <Title>Pet Postings </Title>
+            <IconWrapper>
+              <IoIosArrowForward style={style} />
+              <IoIosArrowForward style={style} />
+            </IconWrapper>
+          </PostLink>
+        </TextWrapper>
       </ArticleContainer>
     </>
   );

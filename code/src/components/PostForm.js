@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
+import CircleLoader from "./CircleLoader"
 import { REACT_APP_BASE_URL } from "../reuseables/urls";
 import {
   MainContainer,
@@ -33,7 +34,7 @@ const PostForm = () => {
   const [location, setLocation] = useState("");
   const [description, setDescription] = useState("");
   const [email, setEmail] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const accessToken = useSelector((store) => store.user.accessToken);
   const history = useHistory();
@@ -46,7 +47,7 @@ const PostForm = () => {
     formData.append("image", fileInput.current.files[0]);
 
     fetch(IMAGE_API_URL, { method: "POST", body: formData })
-      .then((res) => res.json())
+      .then((res) => res.json( setIsLoading(true)))
       .then(({ imageUrl }) => {
         fetch(`${REACT_APP_BASE_URL}/petposts`, {
           method: "POST",
@@ -221,7 +222,7 @@ const PostForm = () => {
           />
         </InputWrapper>
         <ButtonWrapper>
-          <PrimaryButton type="submit" disabled={isLoading}>
+          <PrimaryButton type="submit" disabled={isLoading && <CircleLoader />}>
             Add Post
           </PrimaryButton>
           <SecondaryButton>Cancel</SecondaryButton>

@@ -9,7 +9,7 @@ import user from "./reducers/user";
 
 import Home from "./components/pages/Home";
 import PetPosts from "./components/pages/PetPosts";
-import PetPostDetails from "./components/pages/PetPostDetails";
+import PetDetails from "./components/pages/PetDetails";
 import About from "./components/pages/About";
 import PostForm from "./components/PostForm";
 import Login from "./components/pages/Login";
@@ -33,7 +33,7 @@ const App = () => {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/petposts" component={PetPosts} />
-            <Route path="/pet/:id" component={PetPostDetails} />
+            <Route path="/pet/:id" component={PetDetails} />
             <Route path="/create-post" component={PostForm} />
             <Route path="/about" component={About} />
             <Route path="/register" component={Register} />
