@@ -54,13 +54,13 @@ export const Image = styled.img`
 `;
 
 export const StatusTitle = styled.h1`
-  border-radius: 0 10px 10px 10px;
+  border-radius: 0 8px 8px 8px;
   background-color: #ffb560;
   color: white;
-  padding: 2px 16px;
-  font-size: 18px;
+  padding: 2px 14px;
+  font-size: 16px;
   position: relative;
-  left: -6rem;
+  left: -5.5rem;
   margin: 5px 0;
   text-align: center;
 `;

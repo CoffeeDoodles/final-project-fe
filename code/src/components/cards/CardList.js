@@ -15,7 +15,7 @@ import {
   LocationText,
 } from "../styled-components/CardElements";
 
-const style = { color: "teal", fontSize: "1.5em" };
+const style = { color: "#50B9CD", fontSize: "1.5em" };
 
 
 const CardList = ({ cards }) => {

@@ -25,11 +25,8 @@ const HeroContent = styled.div`
     position: relative;
     top: 0;
     left: 0;
-   
-    @media (min-width: 768px){
-      width: 100vw;
-    }
 `;
+
 const Heading = styled.h1`
     font-family: "Nunito", sans-serif;
     color: white;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { BiMap } from "react-icons/bi";
 
 import { REACT_APP_BASE_URL } from "../../reuseables/urls";
 import {
@@ -12,8 +13,15 @@ import {
   Wrapper,
   StatusTitle,
   Text,
-  CardDescription
+  CardDescription,
+  TextWrapper,
+  PetName,
+  InfoText,
+  PetText
 } from "../styled-components/PetDetailsElements";
+
+
+const style = { color: "#50B9CD", fontSize: "1.5em" };
 
 const PetPostDetails = () => {
   const { id } = useParams();
@@ -42,12 +50,16 @@ const PetPostDetails = () => {
             <Wrapper>
               <StatusTitle>{details.petCard?.status}</StatusTitle>
             </Wrapper>
-            <h1>{details.petCard?.petName}</h1>
-            <h2>{details.petCard?.sex}</h2>
-            <h2>{details.petCard?.breed}</h2>
-            <h2>{details.petCard?.species}</h2>
+            <PetName>"{details.petCard?.petName}"</PetName>
+            <InfoText>{details.petCard?.sex}</InfoText>
+            <TextWrapper>
+              <PetText>{details.petCard?.breed}</PetText>
+              <span>
+              <PetText>{details.petCard?.species}</PetText>
+              </span>
+            </TextWrapper>
             <div>
-              <p>Last Seen: {details.petCard?.location}</p>
+              <InfoText> <BiMap style={style} /> {details.petCard?.location}</InfoText>
             </div>
           </InfoContainer>
         </InnerCard>
