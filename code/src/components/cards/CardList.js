@@ -17,15 +17,14 @@ import {
 
 const style = { color: "#50B9CD", fontSize: "1.5em" };
 
-
 const CardList = ({ cards }) => {
   return (
     <CardsWrapper>
       {cards.map((card) => (
         <CardLink to={`/pet/${card._id}`} key={card.id}>
-          <Card key={card.id} >
-            <InnerCard >
-              <ImageThumbnail >
+          <Card key={card.id}>
+            <InnerCard>
+              <ImageThumbnail>
                 <Image
                   src={card.petCard.imageUrl}
                   alt="petImg"
@@ -41,11 +40,11 @@ const CardList = ({ cards }) => {
                   <Space key={card.species}>{card.petCard.species}</Space>
                 </ImportantText>
                 <LocationText key={card.location}>
-                    <BiMap
-                      style={style}
-                      className="location-icon"
-                      key={card.location}
-                    />
+                  <BiMap
+                    style={style}
+                    className="location-icon"
+                    key={card.location}
+                  />
                   {card.petCard.location}
                 </LocationText>
               </TextWrapper>

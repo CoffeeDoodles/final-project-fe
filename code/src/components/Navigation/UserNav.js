@@ -50,11 +50,8 @@ const UserNav = () => {
           <Link to="/contact" className="contact">
             <li>Contact</li>
           </Link>
-          <button 
-            className="logout"
-            onClick={onButtonClick}
-          > 
-            Logout 
+          <button className="logout" onClick={onButtonClick}>
+            Logout
           </button>
         </ul>
         <button

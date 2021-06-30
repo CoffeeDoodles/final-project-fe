@@ -17,9 +17,9 @@ import {
   TextWrapper,
   PetName,
   InfoText,
-  PetText
+  PetText,
 } from "../styled-components/PetDetailsElements";
-
+// import CommentApp from "../Comments/CommentApp";
 
 const style = { color: "#50B9CD", fontSize: "1.5em" };
 
@@ -55,11 +55,14 @@ const PetPostDetails = () => {
             <TextWrapper>
               <PetText>{details.petCard?.breed}</PetText>
               <span>
-              <PetText>{details.petCard?.species}</PetText>
+                <PetText>{details.petCard?.species}</PetText>
               </span>
             </TextWrapper>
             <div>
-              <InfoText> <BiMap style={style} /> {details.petCard?.location}</InfoText>
+              <InfoText>
+                {" "}
+                <BiMap style={style} /> {details.petCard?.location}
+              </InfoText>
             </div>
           </InfoContainer>
         </InnerCard>
@@ -67,6 +70,7 @@ const PetPostDetails = () => {
           <Text>{details.petCard?.description}</Text>
         </CardDescription>
       </Card>
+      {/* <CommentApp /> Needs work on Logic, not functioning yet*/}
     </CardWrapper>
   );
 };
