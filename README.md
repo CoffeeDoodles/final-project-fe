@@ -1,5 +1,9 @@
-# Project Title: PetSpotters
+# Project Title: PetSpotters (Frontend)
 Developers: Elaine Bergström & Malin Göthe
+
+### Link to Backend: 
+
+https://github.com/CoffeeDoodles/final-project-be
 
 ## Deployed Project:
 
