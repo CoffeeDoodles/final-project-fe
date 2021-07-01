@@ -142,13 +142,14 @@ Malin Göthe (LinkedIn link)
 
 ## If We Had More Time/For the Future:
 
-  *Add searchability among the cards
-  *Add a comment section to individual posts (IN THE WORKS)
-  *Add private chatting to user
-  *Users can edit/delete/update their own posts
-  *Display more recently lost/found pets on home page
-  *have a contact form page
-  *Conditional styling for cards based on status of pet.
+  * Add searchability among the cards
+  * Add a comment section to individual posts (IN THE   
+    WORKS)
+  * Add private chatting to user
+  * Users can edit/delete/update their own posts
+  * Display more recently lost/found pets on home page
+    have a contact form page
+  * Conditional styling for cards based on status of pet.
 
 ## Acknowledgments
 
