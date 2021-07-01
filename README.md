@@ -12,14 +12,14 @@ https://petspotter.netlify.app/
 ## Getting Started
 
 ### Dependencies
-* ###BACKEND:
+* ### BACKEND:
   * Node.js 
   * Express
   * Mongoose
   * MongoDB
   * Cloudinary
 
-* ###FRONTEND:
+* ### FRONTEND:
   * React
   * Redux
   * React-dom
@@ -33,9 +33,9 @@ https://petspotter.netlify.app/
 
 ### Executing program
 
-* Backend 
+* ### Backend 
  * npm run dev (Starts Server)
-* Frontend 
+* ### Frontend 
   * cd petspotter-fe/code
   * npm start (starts local React Server)
 
@@ -51,9 +51,9 @@ Malin Göthe (LinkedIn link)
 </a>
 
 ## Project Log/Issues/Fixes
-### PetSpotters 1.0 Logs:
+## PetSpotters 1.0 Logs:
 
-* Week 1 - (2021/05/31) - (2021/06/06)
+* ## Week 1 - (2021/05/31) - (2021/06/06)
     * Designed Project in Figma for mobile and desktop view.
     * Planned out Basic schedule to follow for all 4 weeks, broke down the project into charts to help
       visualize how the pages connected together and what components we needed. 
@@ -64,20 +64,20 @@ Malin Göthe (LinkedIn link)
     * Set up Queries for dog, cat, found, lost search options
     * Cloudinary set up in backend for image uploading
 
-* Problems: 
+* ### Problems: 
     * Queries were not properly working in postman, required some advice from mentors and was solved by 
       basic if/else statments within the GET request.
     * Cloudinary confusion, unsure of how to set up the FE with Cloudinary API in the same fetch as the form.
     * Had trouble getting data to post to MongoDB for pet posts, solved in following week.
 
-* Week 2 - (2021/06/07) - (2021/06/13)
+* ## Week 2 - (2021/06/07) - (2021/06/13)
     * Started the Frontend, built the bare bones of the HTML for the home page and pet post page. Very
       90's geocities feel.
     * Built form for Login and Register as well as for submitting a pet post (if logged in).
     * We used Redux for Login/Register/Authentication Tokens, and React for the form for pet posts and    later for the pet cards.
     * Some styling of the home page, but not alot. 
 
-* Problems: 
+* ### Problems: 
     * First issue was none of our data in the form for posts was sending and saving in the backend. After 
       much googling, and some mentor advice, we realized that our backend and frontend routes were named 
       the same so the code was getting confused. After applying seperate naming conventions to both FE and BE our data found it's way to mongoDB.
@@ -86,14 +86,14 @@ Malin Göthe (LinkedIn link)
       that the img data would submit at the same time as the form. We eventually got images to upload, 
       but they still weren't saving to our PET SCHEMA in the backend. 
 
-* Week 3 - (2021/06/14 - 2021/06/20)
+* ## Week 3 - (2021/06/14 - 2021/06/20)
        * Half-time demo presentation to bootcamp group. Recieved advice and feedback on current progress.
        * We figured out how to combine the form and image upload fetch on submit by nesting the fetches 
         so that first the image is uploaded and then the data is all sent to MongoDB. 
        * Styling of forms and pages, started to build pet card. 
        * Started building mobile menu
 
-* Problems: 
+* ### Problems: 
       * We needed to connect the Image URL to our PET SCHEMA so that we could iterate it into our
         petcards with the other data submitted in the form. This was solved by adding it to our model 
         in the backend.
@@ -103,7 +103,7 @@ Malin Göthe (LinkedIn link)
       
 
 
-* Week 4 - (2021/06/21 - 2021/06/24)
+* ## Week 4 - (2021/06/21 - 2021/06/24)
     * Styled cards, basic styling of personal pet page, this week was riddled with so many problems. 
     * Everything that could go wrong, did go wrong. 
     * Most time spent problem-solving, googling, and some crying. 
@@ -111,7 +111,7 @@ Malin Göthe (LinkedIn link)
       only users can create new posts... and we couldn't log in. This was fixed after thursday, 
       naturally. 
 
-* Problems:
+* ### Problems:
      * Could not get Form Data to properly map into the PetDetails cards we created, we solved this 
       after realizing our props were not specific enough. We had to add a ? so that if it 
       was true then it would recognize that it needed to continue on in the map or it would realize 
@@ -125,12 +125,14 @@ Malin Göthe (LinkedIn link)
       appear on top of the drop down mobile menu.. this was a surprise on presentation day. However 
       it has been fixed after removing, 'px' from the z-index of the menu. 
 
-Week 5 (2021/06/28 - 2021/07/04) -
-    -Everything that was broken is now fixed, and beautiful.
+* ## Week 5 (2021/06/28 - 2021/07/04) -
+    * Everything that was broken is now fixed, and beautiful.
 
-    -Currently working on a comment section below the personal pet page card. Need to reconfigure the fetch setup so the data saves, also need to think about setting the comments to that specific card id.
+    * Currently working on a comment section below the personal pet page card. Need to 
+      reconfigure the fetch setup so the data saves, also need to think about setting the comments
+       to that specific card id.
 
-    -Also working on ownership of post to user so they can edit and delete posts.   
+    * Also working on ownership of post to user so they can edit and delete posts.   
 
 
 
