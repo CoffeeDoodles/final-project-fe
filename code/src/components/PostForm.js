@@ -222,7 +222,7 @@ const PostForm = () => {
           />
         </InputWrapper>
         <ButtonWrapper>
-          <PrimaryButton type="submit" disabled={isLoading && <CircleLoader />}>
+          <PrimaryButton type="submit">
             Add Post
           </PrimaryButton>
           <SecondaryButton>Cancel</SecondaryButton>
