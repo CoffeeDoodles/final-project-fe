@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
-import CircleLoader from "./CircleLoader"
 import { REACT_APP_BASE_URL } from "../reuseables/urls";
 import {
   MainContainer,
@@ -34,7 +33,6 @@ const PostForm = () => {
   const [location, setLocation] = useState("");
   const [description, setDescription] = useState("");
   const [email, setEmail] = useState("");
-  const [isLoading, setIsLoading] = useState(true);
 
   const accessToken = useSelector((store) => store.user.accessToken);
   const history = useHistory();
@@ -68,7 +66,6 @@ const PostForm = () => {
           }),
         }).then(() => {
           history.push("/petposts");
-          setIsLoading(false);
         });
       });
   };
