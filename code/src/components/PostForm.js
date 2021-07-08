@@ -45,7 +45,7 @@ const PostForm = () => {
     formData.append("image", fileInput.current.files[0]);
 
     fetch(IMAGE_API_URL, { method: "POST", body: formData })
-      .then((res) => res.json( setIsLoading(true)))
+      .then((res) => res.json())
       .then(({ imageUrl }) => {
         fetch(`${REACT_APP_BASE_URL}/petposts`, {
           method: "POST",
